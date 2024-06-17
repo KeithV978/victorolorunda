@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="7.3103256mm"
+   height="30.531382mm"
+   viewBox="0 0 7.3103256 30.531382"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#222222;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1"
+       x="-0.25511834"
+       y="-0.083226232"
+       width="1.5102367"
+       height="1.1664525">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.77708282"
+         id="feGaussianBlur1" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2"
+       x="-0.12300608"
+       y="-0.12746282"
+       width="1.2460122"
+       height="1.2549256">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.35018442"
+         id="feGaussianBlur2" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.469594,-96.324323)">
+    <ellipse
+       style="mix-blend-mode:normal;fill:#181818;fill-opacity:1;stroke-width:0.127332;filter:url(#filter2)"
+       id="path1-3"
+       cx="45.72163"
+       cy="123.56516"
+       rx="3.4162645"
+       ry="3.2968147" />
+    <rect
+       style="mix-blend-mode:normal;fill:#181818;fill-opacity:1;stroke-width:0.068;filter:url(#filter1)"
+       id="rect1-7"
+       width="7.310328"
+       height="22.408785"
+       x="42.371086"
+       y="96.731743"
+       ry="3.655164" />
+    <rect
+       style="fill:#222222;fill-opacity:1;stroke-width:0.068"
+       id="rect1"
+       width="7.310328"
+       height="22.408785"
+       x="40.469593"
+       y="96.324318"
+       ry="3.655164" />
+    <ellipse
+       style="fill:#222222;fill-opacity:1;stroke-width:0.127332"
+       id="path1"
+       cx="44.220322"
+       cy="123.55888"
+       rx="3.4162645"
+       ry="3.2968147" />
+  </g>
+</svg>
