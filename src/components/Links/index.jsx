@@ -62,7 +62,7 @@ export const Links = () => {
             <ListItemIcon>
               <Phone color="primary" />
             </ListItemIcon>
-            <Words component="a" href="phone:+2348152038183">
+            <Words component="a" href="tel:+2348152038183">
               {"+2348152038183"}
             </Words>
           </ListItem>
