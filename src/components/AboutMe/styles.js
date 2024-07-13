@@ -20,8 +20,8 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   // border: "1px solid purple",
 }));
 export const Header = styled(Typography)(({ theme }) => ({
-  background:
-    "linear-gradient(90.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
+ // background:
+  // "linear-gradient(90.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
   padding: ".3rem",
   color: "#1A1A1A",
   fontWeight: 800,
@@ -29,6 +29,8 @@ export const Header = styled(Typography)(({ theme }) => ({
   marginBottom: "1rem",
   display: "flex",
   alignItems: "center",
+  backgroundColor: "transparent",
+  border: `1px solid ${[theme.pallete.primary.main]}`,
   // boxShadow: "1px 1px 20px 1px #000",
   [theme.breakpoints.up("sm")]: {
     fontSize: "20px",
