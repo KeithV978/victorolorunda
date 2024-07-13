@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 export const Wrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   // height: "60vh",
-  minHeight: "500px",
+//  minHeight: "500px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
