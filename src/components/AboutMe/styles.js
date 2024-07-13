@@ -10,7 +10,7 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   padding: "0 1rem",
- marginBottom: "2rem",
+ marginBottom: "3rem",
   [theme.breakpoints.up("sm")]: {
     justifyContent: "flex-end",
     minHeight: "600px",
