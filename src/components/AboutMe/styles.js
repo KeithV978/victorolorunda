@@ -32,7 +32,7 @@ export const Header = styled(Typography)(({ theme }) => ({
   background: "linear-gradient(to bottom, #1a1a1a, #242424)",
   borderBottom: `1px solid ${[theme.palette.primary.main]}`,
   // boxShadow: "1px 1px 20px 1px #000",
-  borderRadius: "12px",
+  borderRadius: "10px",
   [theme.breakpoints.up("sm")]: {
     fontSize: "20px",
   },
