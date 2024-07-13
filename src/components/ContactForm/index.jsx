@@ -91,7 +91,7 @@ export const ContactForm = () => {
           <Person sx={{ color: "#fff" }} />
           <Input
             type="text"
-            {...register("name", { required: true })}
+            {...register("fullName", { required: true })}
             placeholder="What should I call you?"
             // required
           />
