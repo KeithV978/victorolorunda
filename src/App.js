@@ -8,6 +8,7 @@ import theme from "./assets/theme.js";
 import { Layout } from "./layout";
 
 function App() {
+  document.title = "Victor Olorunda - Portfolio"
   return (
     <ThemeProvider theme={theme}>
       {/* <CssBaseline /> */}

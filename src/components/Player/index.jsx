@@ -6,37 +6,15 @@ import IconButton from "@mui/material/IconButton";
 import PlayIcon from "@mui/icons-material/PlayArrow";
 import { useWavesurfer } from "@wavesurfer/react";
 import Pause from "@mui/icons-material/Pause";
-import { styled, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 // import WaveSurfer from "wavesurfer.js";
-import SkipNext from "@mui/icons-material/SkipNext";
+// import SkipNext from "@mui/icons-material/SkipNext";
 
 import audio from "../../assets/music/one.mp3";
-import audio2 from "../../assets/music/two.mp3";
-const { useRef, useState } = React;
+import { AudioWave, Wrapper } from "./styles";
+const { useRef } = React;
 
-const audioUrls = [
-  { file: audio, name: "Falling In Love With You - Cover" },
-  { file: audio2, name: "Fly Me To The Moon - Cover" },
-];
-
-const Wrapper = styled(Box)(() => ({
-  width: "100%",
-  padding: ".5rem",
-  borderRadius: "25px",
-  backgroundColor: "#fff",
-  marginBottom: "2rem",
-  boxShadow: "-17px 20px 28px 3px #000",
-}));
-
-const AudioWave = styled(Box)(() => ({
-  width: "100%",
-  minHeight: "40px",
-  padding: ".7rem",
-  borderRadius: "25px",
-  backgroundColor: "#222121",
-  marginLeft: ".5rem",
-  transition: "all ease .3s",
-}));
+// const audioUrl = { file: audio, name: "Falling In Love With You - Cover" };
 
 const formatTime = (seconds) =>
   [seconds / 60, seconds % 60]
@@ -44,14 +22,13 @@ const formatTime = (seconds) =>
     .join(":");
 
 export const Player = () => {
-  const [urlIndex, setUrlIndex] = useState(0);
   // const [nowPlaying, setNowPlaying] = useState(audioUrls[urlIndex].file);
   const containerRef = useRef(null);
   const theme = useTheme();
 
   const { wavesurfer, isReady, isPlaying, currentTime } = useWavesurfer({
     container: containerRef,
-    url: audioUrls[urlIndex].file,
+    url: audio,
     waveColor: "#cfcfcf",
     progressColor: `${[theme.palette.primary.main]}`,
     height: 17,
@@ -63,41 +40,50 @@ export const Player = () => {
     wavesurfer && wavesurfer.playPause();
   };
 
-  const nextSong = () => {
-    setUrlIndex((index) => (index + 1) % audioUrls.length);
-    // wavesurfer && wavesurfer.playPause();
-  };
-
-  // useEffect(() => {
-  //   if (urlIndex === 0 && isPlaying) setNowPlaying("Falling In Love (Cover)");
-  //   if (urlIndex === 1 && isPlaying)
-  //     setNowPlaying("Fly Me To The Moon (Cover)");
-  //   setNowPlaying("Listen to me sing...");
-  // }, [urlIndex, isPlaying]);
-
   return (
     <Wrapper>
-      {!isPlaying ? (
-        <Typography
-          variant="body2"
-          color="#222121"
-          sx={{ width: "max-content", margin: "auto", fontWeight: 700 }}
-        >
-          Listen to me sing...
-        </Typography>
-      ) : (
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box
+        sx={{
+          display: "flex",
+          // justifyContent: "space-between",
+          alignItems: "center",
+          padding: "0 1rem",
+        }}
+      >
+        {!isPlaying ? (
           <Typography
             variant="body2"
             color="#222121"
-            sx={{ width: "max-content", margin: "auto", fontWeight: 700 }}
+            sx={{
+              width: { sm: "max-content", xs: "100%" },
+              margin: { sm: "auto", xs: ".3rem" },
+              fontWeight: 700,
+            }}
           >
-            {audioUrls[urlIndex].name}
+            Listen to me sing...
           </Typography>
-          <Typography variant="body2">{formatTime(currentTime)}</Typography>
-        </Box>
-      )}
-      <Stack direction="row" margin=".5rem" alignItems="center">
+        ) : (
+          <Typography
+            variant="body2"
+            color="#222121"
+            sx={{
+              width: "max-content",
+              margin: { sm: "auto", xs: ".3rem" },
+              fontWeight: 700,
+            }}
+          >
+            Falling In Love With You - {formatTime(currentTime)}
+          </Typography>
+          // <Typography variant="body2"></Typography>
+        )}
+      </Box>
+      <Stack
+        direction="row"
+        sx={{
+          margin: { sm: ".5rem", xs: "auto" },
+        }}
+        alignItems="center"
+      >
         {isReady && (
           <IconButton
             sx={{
@@ -116,24 +102,6 @@ export const Player = () => {
             )}
           </IconButton>
         )}
-        {isPlaying && (
-          <IconButton
-            sx={{
-              backgroundColor: "#222121",
-              width: "1.7rem",
-              height: "1.7rem",
-              marginLeft: ".4rem",
-              ":hover": {
-                backgroundColor: "#222121",
-              },
-              transition: "all .3s ease",
-            }}
-            onClick={nextSong}
-          >
-            <SkipNext sx={{ color: "#fff" }} />
-          </IconButton>
-        )}
-
         {/* Wave Form. */}
         <AudioWave ref={containerRef}></AudioWave>
       </Stack>

@@ -1,8 +1,8 @@
 import * as React from "react";
-import { styled } from "@mui/material";
+import { AnimatePresence, motion } from "framer-motion";
+import { Data } from "./data";
 
 import Box from "@mui/material/Box";
-import { AnimatePresence, motion } from "framer-motion";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistoryRounded";
@@ -14,54 +14,28 @@ import GroupWorkRounded from "@mui/icons-material/GroupWorkRounded";
 import MusicNoteRounded from "@mui/icons-material/MusicNoteRounded";
 import SchoolRounded from "@mui/icons-material/SchoolRounded";
 import WorkRounded from "@mui/icons-material/WorkRounded";
-import PreviewContent from "./PreviewContent";
+// import Experience from "./Preview/Experience";
+import Preview from "./Preview";
+import { Cell, CellWrapper, ContentWrapper } from "./styles";
 
-const CellWrapper = styled(motion.div)(() => ({
-  height: "100%",
-  width: "100%",
-  cursor: "pointer",
-  position: "relative",
-}));
-
-const Cell = styled(Box)(({ theme }) => ({
-  backgroundColor: "#fff",
-  color: "#222222",
-  fontSize: "5rem",
-  height: "100%",
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  transition: "all ease .3s .2s",
-  "&:hover": {
-    backgroundColor: `${[theme.palette.primary.main]}`,
-    color: "#fff",
-  },
-}));
-
-export const PBSheep = () => {
+export const PBSheep = React.memo(() => {
   const [selectedId, setSelectedId] = React.useState(null);
+  const [data, setData] = React.useState(null);
+
+  const handleSelection = (id) => {
+    setSelectedId(id);
+    setData(Data[id - 1]);
+  };
 
   return (
-    <div style={{ width: "100%" }}>
-      <Box
-        sx={{
-          maxWidth: "400px",
-          width: "100%",
-          minHeight: { sm: "750px", xs: "600px" },
-          marginTop: "5rem",
-          // border: "1px solid grey",
-          display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "center",
-        }}
-      >
+    <div>
+      <ContentWrapper>
         <Stack
           direction="column"
-          spacing={2}
+          // spacing={2}
           height="100%"
           width="100%"
-          sx={{ position: "relative" }}
+          sx={{ position: "relative", gap: { xs: 1, sm: 2 } }}
         >
           <AnimatePresence>
             {selectedId && (
@@ -75,8 +49,8 @@ export const PBSheep = () => {
                   transform: "translate(-50%,-50%)",
                   width: "100%",
                   height: "100%",
-                  margin: "3rem",
-                  zIndex: 10000,
+                  // margin: "3rem",
+                  zIndex: 100,
                 }}
               >
                 <motion.div
@@ -89,21 +63,21 @@ export const PBSheep = () => {
                   }}
                   layoutId={selectedId}
                 >
-                  <PreviewContent
-                    layoutId={selectedId}
-                    close={() => setSelectedId(null)}
-                  />
+                  <Preview data={data} setSelectedId={setSelectedId} />
                 </motion.div>
               </Box>
             )}
           </AnimatePresence>
           {/* First Stage */}
-          <Stack direction="row" spacing={2} height="250px" width="100%">
+          <Stack
+            direction="row"
+            sx={{ gap: { xs: 1, sm: 2 }, height: "250px", width: "100%" }}
+          >
             <div style={{ width: "100%" }}>
               <CellWrapper
                 layoutId={1}
-                onClick={() => setSelectedId(1)}
-                whileHover={{ scale: 0.9 }}
+                onClick={() => handleSelection(1)}
+                whileHover={{ padding: "7px" }}
               >
                 {!selectedId && (
                   <Typography
@@ -113,12 +87,24 @@ export const PBSheep = () => {
                       position: "absolute",
                       rotate: "270deg",
                       color: "#fff",
-                      left: "-60px",
+                      left: { sm: "-115px", xs: "-85px" },
                       bottom: 30,
                       fontWeight: 700,
+                      borderBottom: "1px solid #000",
+                      borderColor: "primary.main",
+                      lineHeight: ".1em",
+                      textAlign: "center",
+                      width: "100%",
                     }}
                   >
-                    Experience
+                    <span
+                      style={{
+                        backgroundColor: "#1a1a1a",
+                        padding: "0 10px",
+                      }}
+                    >
+                      Experience
+                    </span>
                   </Typography>
                 )}
                 <Cell>
@@ -127,11 +113,17 @@ export const PBSheep = () => {
               </CellWrapper>
             </div>
             <div style={{ width: "100%" }}>
-              <Stack direction="column" spacing={2} height="100%">
+              <Stack
+                direction="column"
+                sx={{
+                  gap: { xs: 1, sm: 2 },
+                  height: "100%",
+                }}
+              >
                 <CellWrapper
-                  whileHover={{ scale: 0.9 }}
+                  whileHover={{ padding: "7px" }}
                   layoutId={2}
-                  onClick={() => setSelectedId(2)}
+                  onClick={() => handleSelection(2)}
                 >
                   {!selectedId && (
                     <Typography
@@ -143,9 +135,21 @@ export const PBSheep = () => {
                         top: "-25px",
                         left: 0,
                         fontWeight: 700,
+                        borderBottom: "1px solid #000",
+                        borderColor: "primary.main",
+                        lineHeight: ".1em",
+                        textAlign: "center",
+                        width: "100%",
                       }}
                     >
-                      Tools
+                      <span
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "0 10px",
+                        }}
+                      >
+                        Tools
+                      </span>
                     </Typography>
                   )}
                   <Cell>
@@ -153,9 +157,9 @@ export const PBSheep = () => {
                   </Cell>
                 </CellWrapper>
                 <CellWrapper
-                  whileHover={{ scale: 0.9 }}
+                  whileHover={{ padding: "7px" }}
                   layoutId={3}
-                  onClick={() => setSelectedId(3)}
+                  onClick={() => handleSelection(3)}
                 >
                   {!selectedId && (
                     <Typography
@@ -165,12 +169,24 @@ export const PBSheep = () => {
                         position: "absolute",
                         color: "#fff",
                         rotate: "270deg",
-                        right: "-30px",
+                        right: { sm: "-115px", xs: "-85px" },
                         bottom: 0,
                         fontWeight: 700,
+                        borderBottom: "1px solid #000",
+                        borderColor: "primary.main",
+                        lineHeight: ".1em",
+                        textAlign: "center",
+                        width: "100%",
                       }}
                     >
-                      Bio
+                      <span
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "0 10px",
+                        }}
+                      >
+                        Bio
+                      </span>
                     </Typography>
                   )}
                   <Cell>
@@ -182,13 +198,26 @@ export const PBSheep = () => {
           </Stack>
 
           {/* Second stage */}
-          <Stack direction="row" spacing={2} height="400px" width="100%">
+          <Stack
+            direction="row"
+            sx={{
+              gap: { xs: 1, sm: 2 },
+              height: "400px",
+              width: "100%",
+            }}
+          >
             <div style={{ width: "100%" }}>
-              <Stack direction="column" spacing={2} height="100%">
+              <Stack
+                direction="column"
+                sx={{
+                  gap: { xs: 1, sm: 2 },
+                  height: "100%",
+                }}
+              >
                 <CellWrapper
-                  whileHover={{ scale: 0.9 }}
+                  whileHover={{ padding: "7px" }}
                   layoutId={4}
-                  onClick={() => setSelectedId(4)}
+                  onClick={() => handleSelection(4)}
                   sx={{ height: "65% !important" }}
                 >
                   {!selectedId && (
@@ -199,12 +228,24 @@ export const PBSheep = () => {
                         position: "absolute",
                         rotate: "270deg",
                         color: "#fff",
-                        left: "-60px",
+                        left: { xs: "-85px", sm: "-115px" },
                         bottom: 30,
                         fontWeight: 700,
+                        borderBottom: "1px solid #000",
+                        borderColor: "primary.main",
+                        lineHeight: ".1em",
+                        textAlign: "center",
+                        width: "100%",
                       }}
                     >
-                      Education
+                      <span
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "0 10px",
+                        }}
+                      >
+                        Education
+                      </span>
                     </Typography>
                   )}
                   <Cell>
@@ -212,9 +253,9 @@ export const PBSheep = () => {
                   </Cell>
                 </CellWrapper>
                 <CellWrapper
-                  whileHover={{ scale: 0.9 }}
+                  whileHover={{ padding: "7px" }}
                   layoutId={5}
-                  onClick={() => setSelectedId(5)}
+                  onClick={() => handleSelection(5)}
                   sx={{ height: "35% !important" }}
                 >
                   <Cell>
@@ -231,20 +272,38 @@ export const PBSheep = () => {
                         bottom: "-25px",
                         left: 0,
                         fontWeight: 700,
+                        borderBottom: "1px solid #000",
+                        borderColor: "primary.main",
+                        lineHeight: ".1em",
+                        textAlign: "center",
+                        width: "100%",
                       }}
                     >
-                      Skills
+                      <span
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "0 10px",
+                        }}
+                      >
+                        Skills
+                      </span>
                     </Typography>
                   )}
                 </CellWrapper>
               </Stack>
             </div>
             <div style={{ width: "100%" }}>
-              <Stack direction="column" spacing={2} height="100%">
+              <Stack
+                direction="column"
+                sx={{
+                  gap: { xs: 1, sm: 2 },
+                  height: "100%",
+                }}
+              >
                 <CellWrapper
-                  whileHover={{ scale: 0.9 }}
+                  whileHover={{ padding: "7px" }}
                   layoutId={6}
-                  onClick={() => setSelectedId(6)}
+                  onClick={() => handleSelection(6)}
                   sx={{ height: "35% !important" }}
                 >
                   {!selectedId && (
@@ -255,12 +314,24 @@ export const PBSheep = () => {
                         position: "absolute",
                         color: "#fff",
                         rotate: "270deg",
-                        right: "-50px",
+                        right: { sm: "-115px", xs: "-85px" },
                         bottom: 20,
                         fontWeight: 700,
+                        borderBottom: "1px solid #000",
+                        borderColor: "primary.main",
+                        lineHeight: ".1em",
+                        textAlign: "center",
+                        width: "100%",
                       }}
                     >
-                      Projects
+                      <span
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "0 10px",
+                        }}
+                      >
+                        Projects
+                      </span>
                     </Typography>
                   )}
                   <Cell>
@@ -269,8 +340,8 @@ export const PBSheep = () => {
                 </CellWrapper>
                 <CellWrapper
                   layoutId={7}
-                  whileHover={{ scale: 0.9 }}
-                  onClick={() => setSelectedId(7)}
+                  whileHover={{ padding: "7px" }}
+                  onClick={() => handleSelection(7)}
                   sx={{ height: "65% !important" }}
                 >
                   <Cell>
@@ -287,9 +358,22 @@ export const PBSheep = () => {
                         bottom: "-25px",
                         left: 0,
                         fontWeight: 700,
+                        width: "100%",
+                        borderBottom: "1px solid #000",
+                        borderColor: "primary.main",
+                        lineHeight: ".1em",
+                        textAlign: "center",
+                        // margin: "10px 0 20px",
                       }}
                     >
-                      Hobbies
+                      <span
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "0 10px",
+                        }}
+                      >
+                        Hobbies
+                      </span>
                     </Typography>
                   )}
                 </CellWrapper>
@@ -297,7 +381,7 @@ export const PBSheep = () => {
             </div>
           </Stack>
         </Stack>
-      </Box>
+      </ContentWrapper>
     </div>
   );
-};
+});

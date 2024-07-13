@@ -17,12 +17,17 @@ const Line = styled("div")(({ theme }) => ({
     justifyContent: "space-between",
   },
 }));
-const Bulb = styled("div")(() => ({
+const Bulb = styled("div")(({ theme }) => ({
   width: "100px",
   height: "100px",
   borderRadius: "50%",
   marginRight: "-50px",
   backgroundColor: "#fff",
+  [theme.breakpoints.up("sm")]: {
+    width: "80px",
+    height: "80px",
+    marginRight: "-40px",
+  },
 }));
 
 export const CenterLine = () => {

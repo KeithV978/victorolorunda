@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import { CircularProgress, styled } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 // import Box from "@mui/material/Box";
@@ -8,75 +7,19 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import SendRounded from "@mui/icons-material/SendRounded";
 import Person from "@mui/icons-material/Person";
+import CircularProgress from "@mui/material/CircularProgress";
 import WavingHandRounded from "@mui/icons-material/WavingHandRounded";
-import { AlternateEmailRounded, ThumbUpRounded } from "@mui/icons-material";
+import AlternateEmailRounded from "@mui/icons-material/AlternateEmailRounded";
+import ThumbUpRounded from "@mui/icons-material/ThumbUpRounded";
+import {
+  ErrorMessage,
+  Form,
+  Header,
+  Input,
+  InputWrapper,
+  TextArea,
+} from "./styles";
 
-const Form = styled("form")(() => ({
-  width: "100%",
-  padding: "1.2rem",
-  borderRadius: "25px",
-  backgroundColor: "#fff",
-  marginBottom: "5rem",
-  boxShadow: "-17px 20px 28px 3px #000",
-}));
-
-const InputWrapper = styled("div")(() => ({
-  width: "100%",
-  padding: ".5rem .8rem",
-  borderRadius: "25px",
-  backgroundColor: "#222121",
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-}));
-const Input = styled("input")(() => ({
-  border: "none",
-  outline: "none",
-  width: "100%",
-  padding: ".5rem",
-  color: "#fff",
-  fontWeight: 700,
-  backgroundColor: "transparent",
-  transition: "ease .6s ",
-  "::placeholder": {
-    fontWeight: 700,
-    color: "#959595",
-    fontFamily: "inherit",
-  },
-}));
-const TextArea = styled("textarea")(() => ({
-  border: "none",
-  outline: "none",
-  width: "100%",
-  padding: ".5rem",
-  color: "#fff",
-  fontWeight: 700,
-  backgroundColor: "transparent",
-  "::placeholder": {
-    color: "#959595",
-    fontFamily: " Arial, sans-serif",
-    fontWeight: "bold",
-  },
-  "&:focus": {
-    color: "#fff",
-  },
-}));
-
-const ErrorMessage = styled("p")(() => ({
-  fontSize: ".8rem",
-  color: "#222222",
-  marginTop: ".5rem",
-  paddingLeft: "1rem",
-  marginBottom: "1rem",
-}));
-const Header = styled("div")(() => ({
-  width: "100%",
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "center",
-}));
 export const ContactForm = () => {
   const [sending, setSending] = React.useState(false);
   const [message, setMessage] = React.useState("");
@@ -98,6 +41,7 @@ export const ContactForm = () => {
       .then(() => {
         setSending(false);
         setMessage("Message sent!");
+        reset();
       })
       .catch((error) => {
         setSending(false);
@@ -115,6 +59,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   // console.log(errors);
   return (
@@ -196,8 +141,11 @@ export const ContactForm = () => {
           minWidth: "150px",
           margin: "auto",
           display: "flex",
-          boxShadow: "0px 5px 25px 0px #222",
+          // boxShadow: "0px 5px 25px 0px #222",
+          // WebkitBoxShadow: "0px 5px 25px 0px #222",
+          // MozBoxSizing: "0px 5px 25px 0px #222",
           transition: "all ease .2s .2s",
+          WebkitTransition: "all ease .2s .2s",
         }}
         // onClick={() => setSending(true)}
       >

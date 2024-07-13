@@ -8,6 +8,7 @@ import Phone from "@mui/icons-material/PhoneRounded";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import AlternateEmail from "@mui/icons-material/AlternateEmailRounded";
 import { styled } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
 
 const Words = styled(Typography)(() => ({
   color: "#cfcfcf",
@@ -45,7 +46,7 @@ export const Links = () => {
             <ListItemIcon>
               <LinkedIn color="primary" />
             </ListItemIcon>
-            <Words component="a" href="https://linkedin.com/">
+            <Words component="a" href="https://linkedin.com/in/victor-olorunda">
               {"victor-olorunda"}
             </Words>
           </ListItem>
@@ -65,16 +66,24 @@ export const Links = () => {
               {"+2348152038183"}
             </Words>
           </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <GitHub color="primary" />
+            </ListItemIcon>
+            <Words component="a" href="https://github.com/KeithV978">
+              KeithV978
+            </Words>
+          </ListItem>
         </List>
 
-        <Box sx={{ marginTop: "5rem" }}>
+        <Box sx={{ marginTop: "5rem", maxWidth: "500px" }}>
           <Typography
             variant="h5"
             color="white"
             textAlign="center"
             sx={{ textShadow: "4px 7px 20px 1px #000" }}
           >
-            "If we're not building, then we're destroying..."
+            "Man is still the most extraordinary computer of all."
           </Typography>
         </Box>
       </div>

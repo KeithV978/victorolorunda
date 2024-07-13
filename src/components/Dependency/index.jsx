@@ -1,47 +1,19 @@
-// import CodeRounded from "@mui/icons-material/DataObjectRounded";
-import { styled } from "@mui/material";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import CodeRounded from "@mui/icons-material/DataObjectRounded";
 
-const Wrapper = styled(Box)(() => ({
-  width: "350px",
-}));
-const Header = styled(Typography)(() => ({
-  background:
-    "linear-gradient(270.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
-  padding: ".3rem",
-  color: "#1A1A1A",
-  fontWeight: 800,
-  fontSize: "20px",
-  paddingLeft: "4rem",
-  marginBottom: "1.5rem",
-  boxShadow: "4px 7px 20px 1px #000",
-  // display: "flex",
-  // flexDirection: "row",
-  // alignItems: "center",
-}));
-const Paragraph = styled("a")(({ theme }) => ({
-  color: "#fff",
-  fontSize: "17px",
-  fontWeight: 700,
-  lineHeight: "24px",
-  borderLeft: "2px solid transparent",
-  padding: "10px",
-  transition: "all ease .2s .2s",
-  "&:hover": {
-    borderLeft: `3px solid ${[theme.palette.primary.main]}`,
-  },
-}));
+import Typography from "@mui/material/Typography";
+import { Body, Header, Paragraph, Wrapper } from "./styles";
+import { useTheme } from "@mui/material";
 
 export const Dependency = () => {
+  const theme = useTheme();
   return (
     <Wrapper>
       <Header variant="h5">
-        If I Were A Dependency...
-        {/* <CodeRounded sx={{ marginRight: ".2rem" }} /> */}
+        <CodeRounded sx={{ marginRight: ".2rem" }} />
+        If I Were A Dependency
       </Header>
 
-      <Box sx={{ paddingLeft: "6rem" }}>
+      <Body>
         <Typography
           color="primary"
           fontSize="17px"
@@ -51,8 +23,14 @@ export const Dependency = () => {
           import <span style={{ color: "#fff" }}>{"{"} </span>
         </Typography>
         <Paragraph href="https://react.org">React,</Paragraph> <br />
-        <Paragraph href="https://redux.com">Redux,</Paragraph> <br />
+        <Paragraph href="https://redux.com">
+          Redux{" "}
+          <span style={{ color: `${[theme.palette.primary.main]}` }}> as </span>{" "}
+          redux-saga,
+        </Paragraph>
+        <br />
         <Paragraph href="https://express.com">Express,</Paragraph> <br />
+        <Paragraph href="https://express.com">Node,</Paragraph> <br />
         <Paragraph href="https://mui.com">Material-ui,</Paragraph> <br />
         <Paragraph href="https://mongodb.com">MongoDB,</Paragraph> <br />
         <Paragraph href="https://firebase.com">Firebase,</Paragraph> <br />
@@ -65,9 +43,9 @@ export const Dependency = () => {
           component="a"
           href="https://olorunda.xyz"
         >
-          <span style={{ color: "#fff" }}>{"}"}</span> from 'victor-olorunda'
+          <span style={{ color: "#fff" }}>{"}"}</span> from "victor-olorunda";
         </Typography>
-      </Box>
+      </Body>
     </Wrapper>
   );
 };

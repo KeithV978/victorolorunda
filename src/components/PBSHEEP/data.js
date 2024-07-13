@@ -5,8 +5,12 @@ import GroupWorkRounded from "@mui/icons-material/GroupWorkRounded";
 import MusicNoteRounded from "@mui/icons-material/MusicNoteRounded";
 import SchoolRounded from "@mui/icons-material/SchoolRounded";
 import WorkRounded from "@mui/icons-material/WorkRounded";
+import AutoStoriesRounded from "@mui/icons-material/AutoStoriesRounded";
+import CastForEducationRounded from "@mui/icons-material/CastForEducationRounded";
+import Mic from "@mui/icons-material/Mic";
+import VisibilityRounded from "@mui/icons-material/VisibilityRounded";
 
-export const data = [
+export const Data = [
   {
     title: "Experience",
     icon: (
@@ -16,17 +20,18 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
-    content: [
-      // type: "list",
-      { subtitle: "Freelancing (Consultant)", duration: "03/2020 - till date" },
+    items: [
       {
-        subtitle: "IT Administrator",
-        firm: "3TEES Global Educational Services",
-        duration: "09/2017 - 12/2019",
-        details: [
-          "I consulted in projects of other developers.",
-          "I contributed to open source projects.",
-        ],
+        heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
+        value: "Freelance Fullstack Web Development (1+ years)",
+      },
+      {
+        heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
+        value: "Customer Support Representative (2 years)",
+      },
+      {
+        heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
+        value: "...",
       },
     ],
   },
@@ -39,6 +44,20 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
+    items: [
+      {
+        heading: <CodeRounded color="inherit" fontSize="inherit" />,
+        value: "Visual Studio Code (Choice Code Editor)",
+      },
+      {
+        heading: <CodeRounded color="inherit" fontSize="inherit" />,
+        value: "JustInMind (Prototyping And Wireframing)",
+      },
+      {
+        heading: <CodeRounded color="inherit" fontSize="inherit" />,
+        value: "Inkscape (Illustrations, SVGs, etc)",
+      },
+    ],
   },
   {
     title: "Bio",
@@ -49,6 +68,14 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
+    items: [
+      { heading: "Fullname: ", value: "Victor Oshokunofa Olorunda" },
+      { heading: "Nationality: ", value: "Nigerian (Edo State)" },
+      { heading: "Gender: ", value: "Male" },
+      { heading: "Email: ", value: "victorolorunda6@gmail.com" },
+      { heading: "Phone: ", value: "+2348152038183" },
+      { heading: "Lives In: ", value: "Edo State, Nigeria." },
+    ],
   },
   {
     title: "Education",
@@ -59,6 +86,20 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
+    items: [
+      {
+        heading: <SchoolRounded color="inherit" fontSize="inherit" />,
+        value: "University Of Benin (BSc)",
+      },
+      {
+        heading: <SchoolRounded color="inherit" fontSize="inherit" />,
+        value: "O'tega International College",
+      },
+      {
+        heading: <SchoolRounded color="inherit" fontSize="inherit" />,
+        value: "Access International School",
+      },
+    ],
   },
   {
     title: "Skills",
@@ -69,6 +110,20 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
+    items: [
+      {
+        heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
+        value: "Posses a keen eye for details.",
+      },
+      {
+        heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
+        value: "An autodidact.",
+      },
+      {
+        heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
+        value: "...",
+      },
+    ],
   },
   {
     title: "Projects",
@@ -79,6 +134,33 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
+    items: [
+      {
+        heading: "Landlords And Tenants",
+        value: (
+          <a href="https://landlordsandtenants.org">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+      {
+        heading: "Uniben Marketplace",
+        value: (
+          <a href="https://unibenmarketplace.com">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+
+      {
+        heading: "Forex With Kayode",
+        value: (
+          <a href="https://">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+    ],
   },
   {
     title: "Hobbies",
@@ -89,5 +171,23 @@ export const data = [
         sx={{ marginRight: ".5rem" }}
       />
     ),
+    items: [
+      {
+        heading: <Mic color="inherit" fontSize="inherit" />,
+        value: "Singing and recording songs",
+      },
+      {
+        heading: <MusicNoteRounded color="inherit" fontSize="inherit" />,
+        value: "Playing the guitar",
+      },
+      {
+        heading: <AutoStoriesRounded color="inherit" fontSize="inherit" />,
+        value: "Reading",
+      },
+      {
+        heading: <CastForEducationRounded color="inherit" fontSize="inherit" />,
+        value: "Teaching",
+      },
+    ],
   },
 ];

@@ -1,29 +1,27 @@
-import React from "react";
+import * as React from "react";
 import { Top } from "./top";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { Footer } from "../components/Footer";
 import { Left } from "./left";
 import { Right } from "./right";
-// import { CenterLine } from "./center";
 
-export const Layout = () => {
+export const Layout = React.memo(() => {
   return (
     <div>
       <Container
         sx={{
-          width: { md: "80%", sm: "85%", xs: "90%" },
+          width: { md: "90%", sm: "95%", xs: "100%" },
           maxWidth: "1290px",
         }}
       >
         <Top />
         <Grid container spacing={2}>
           <Left />
-          {/* <CenterLine /> */}
           <Right />
         </Grid>
       </Container>
       <Footer />
     </div>
   );
-};
+});

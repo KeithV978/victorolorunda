@@ -11,7 +11,7 @@ export const Footer = () => {
       }}
     >
       <Typography textAlign="center" color="white" fontWeight={700}>
-        olorunda &copy; {new Date().getFullYear()}
+        &copy; olorunda {new Date().getFullYear()}
       </Typography>
     </Box>
   );
