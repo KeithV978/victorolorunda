@@ -30,7 +30,7 @@ export const Header = styled(Typography)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   backgroundColor: "transparent",
-  border: `1px solid ${[theme.pallete.primary.main]}`,
+  border: `1px solid ${[theme.palette.primary.main]}`,
   // boxShadow: "1px 1px 20px 1px #000",
   [theme.breakpoints.up("sm")]: {
     fontSize: "20px",
