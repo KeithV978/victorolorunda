@@ -23,7 +23,7 @@ export const Header = styled(Typography)(({ theme }) => ({
  // background:
   // "linear-gradient(90.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
   padding: ".3rem",
-  color: "#1A1A1A",
+  color: "#fff",
   fontWeight: 800,
   fontSize: "1.1rem",
   marginBottom: "1rem",
