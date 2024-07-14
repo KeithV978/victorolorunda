@@ -1,7 +1,8 @@
 import CodeRounded from "@mui/icons-material/DataObjectRounded";
 
 import Typography from "@mui/material/Typography";
-import { Body, Header, Paragraph, Wrapper } from "./styles";
+import { Body, Paragraph, Wrapper } from "./styles";
+import { Header } from "../AboutMe/styles";
 import { useTheme } from "@mui/material";
 
 export const Dependency = () => {
