@@ -2,7 +2,7 @@ import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Data } from "./data";
 
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistoryRounded";
@@ -39,33 +39,28 @@ export const PBSheep = React.memo(() => {
         >
           <AnimatePresence>
             {selectedId && (
-              <Box
-                sx={{
+              <motion.div
+                // animate={{
+                // }}
+                style={{
                   position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  // right: 0,
-                  // bottom: 0,
-                  transform: "translate(-50%,-50%)",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
                   width: "100%",
                   height: "100%",
-                  // margin: "3rem",
-                  zIndex: 100,
+                  zIndex: 1000,
+                  backgroundColor: "#fff",
                 }}
+                layoutId={selectedId}
               >
-                <motion.div
-                  // animate={{
-                  // }}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "#fff",
-                  }}
+                <Preview
                   layoutId={selectedId}
-                >
-                  <Preview data={data} setSelectedId={setSelectedId} />
-                </motion.div>
-              </Box>
+                  data={data}
+                  setSelectedId={setSelectedId}
+                />
+              </motion.div>
             )}
           </AnimatePresence>
           {/* First Stage */}

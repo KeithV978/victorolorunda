@@ -8,16 +8,21 @@ export const Header = styled(Box)(() => ({
   justifyContent: "space-between",
 }));
 export const Body = styled(Box)(({ theme }) => ({
-  padding: "2rem 1rem",
-  borderRadius: "12px",
+  padding: "1rem .5rem 0 0",
+  margin: ".5rem",
+  borderRadius: "8px",
   color: `${[theme.palette.primary.main]}`,
   //   border: `1px solid ${[theme.palette.primary.main]}`,
   backgroundColor: `${[theme.palette.primary.light]}`,
+  [theme.breakpoints.up("sm")]: {
+    padding: "2rem 1rem",
+    borderRadius: "12px",
+  },
 }));
 
 export const ContentWrapper = styled("div")(({ theme }) => ({
-  maxWidth: "300px",
-  minWidth: "300px",
+  maxWidth: "350px",
+  // minWidth: "300px",
 
   width: "100%",
   // height: "100vh",

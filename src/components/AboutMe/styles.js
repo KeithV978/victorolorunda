@@ -5,12 +5,12 @@ import Typography from "@mui/material/Typography";
 export const Wrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   // height: "60vh",
-//  minHeight: "500px",
+  //  minHeight: "500px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   padding: "0 1rem",
- marginBottom: "3rem",
+  marginBottom: "3rem",
   [theme.breakpoints.up("sm")]: {
     justifyContent: "flex-end",
     minHeight: "600px",
@@ -20,12 +20,12 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   // border: "1px solid purple",
 }));
 export const Header = styled(Typography)(({ theme }) => ({
- // background:
+  // background:
   // "linear-gradient(90.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
   padding: ".3rem",
-  color: "#fff",
+  color: "#cfcfcf",
   fontWeight: 800,
-  fontSize: "1.1rem",
+  fontSize: "1rem",
   marginBottom: "1rem",
   display: "flex",
   alignItems: "center",
@@ -34,6 +34,8 @@ export const Header = styled(Typography)(({ theme }) => ({
   // boxShadow: "1px 1px 20px 1px #000",
   borderBottomLeftRadius: "10px",
   borderBottomRightRadius: "10px",
+  // textAlign: "center",
+  // width: "100%",
   [theme.breakpoints.up("sm")]: {
     fontSize: "20px",
   },

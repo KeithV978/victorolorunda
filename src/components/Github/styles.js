@@ -10,6 +10,7 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   padding: "0 1rem",
   maxWidth: "360px",
   minWidth: "360px",
+  minHeigh: "60vh",
 
   [theme.breakpoints.up("sm")]: {
     // justifyContent: "right",
