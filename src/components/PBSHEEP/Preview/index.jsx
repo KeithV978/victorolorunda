@@ -55,7 +55,7 @@ const Preview = React.memo(({ data, setSelectedId }) => {
                   flexDirection: "row",
                   gap: 1,
                   alignItems: "center",
-                  borderBottom: "1px solid grey",
+                  borderTop: index === 0 ? "" : "1px solid grey",
                   borderColor: "#fdd5c6",
                   minHeight: "8vh",
                 }}
