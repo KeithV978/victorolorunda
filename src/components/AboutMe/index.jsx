@@ -25,9 +25,9 @@ export const AboutMe = () => {
           </Paragraph>
           {/* <br /> */}
           <Paragraph variant="body2">
-            I have been freelancing for the most part of my tech career. With
+            I have been freelancing for the most part of my tech career, with
             two years of experience in Customer Support. I am not entirely self
-            taught but for the most part, I am.
+            taught but predominantly, I am.
           </Paragraph>
           {/* <br /> */}
           <Paragraph variant="body2">
@@ -35,7 +35,7 @@ export const AboutMe = () => {
           </Paragraph>
           {/* <br /> */}
           <Paragraph variant="body2">
-            I have worked and few a few projects that have gone live.
+            I have worked on a few projects that have gone live.
             <br />
             My portfolio as well as the other things I have worked on have been
             designed by myself.
