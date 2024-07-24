@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Phone from "@mui/icons-material/PhoneRounded";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import AlternateEmail from "@mui/icons-material/AlternateEmailRounded";
+import WhatsApp from "@mui/icons-material/WhatsApp";
 import { styled } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 
@@ -63,7 +64,15 @@ export const Links = () => {
               <Phone color="primary" />
             </ListItemIcon>
             <Words component="a" href="tel:+2348152038183">
-              {"+2348152038183"}
+              {"Call Me"}
+            </Words>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <WhatsApp color="primary" />
+            </ListItemIcon>
+            <Words component="a" href="https://wa.me/+2348152038183">
+              {"Message Me"}
             </Words>
           </ListItem>
           <ListItem>

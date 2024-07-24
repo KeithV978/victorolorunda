@@ -25,6 +25,8 @@ export const ContactForm = () => {
   const [message, setMessage] = React.useState("");
 
   const formSubmission = (data) => {
+    if (data.message.length === 0) return;
+
     setSending(true);
     emailjs.init({
       publicKey: "y5Yu3oje6EHLsL_Qd",

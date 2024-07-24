@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import ListItem from "@mui/material/ListItem";
 
 import Close from "@mui/icons-material/Close";
-// import { Header } from "../../components/Header";
 import Box from "@mui/material/Box";
 import { Body, Header } from "../styles";
 

@@ -146,7 +146,11 @@ export const Data = [
       {
         heading: "Landlords And Tenants (Wordpress)",
         value: (
-          <a href="https://landlordsandtenants.org">
+          <a
+            href="https://landlordsandtenants.org"
+            target="_blank"
+            rel="noreferrer"
+          >
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
@@ -154,7 +158,11 @@ export const Data = [
       {
         heading: "Uniben Marketplace (React)",
         value: (
-          <a href="https://unibenmarketplace.com">
+          <a
+            href="https://unibenmarketplace.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
@@ -163,7 +171,7 @@ export const Data = [
       {
         heading: "Forex House Ng. (React)",
         value: (
-          <a href="https://forexhouseng.com">
+          <a href="https://forexhouseng.com" target="_blank" rel="noreferrer">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
@@ -171,7 +179,7 @@ export const Data = [
       {
         heading: "My Portfolio (React)",
         value: (
-          <a href="https://olorunda.xyz">
+          <a href="https://olorunda.xyz" target="_blank" rel="noreferrer">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
