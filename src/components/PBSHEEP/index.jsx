@@ -9,12 +9,10 @@ import WorkHistoryIcon from "@mui/icons-material/WorkHistoryRounded";
 import CodeRounded from "@mui/icons-material/CodeRounded";
 import Person4Rounded from "@mui/icons-material/PersonRounded";
 
-// import InterestsRounded from "@mui/icons-material/InterestsRounded";
 import GroupWorkRounded from "@mui/icons-material/GroupWorkRounded";
 import MusicNoteRounded from "@mui/icons-material/MusicNoteRounded";
 import SchoolRounded from "@mui/icons-material/SchoolRounded";
 import WorkRounded from "@mui/icons-material/WorkRounded";
-// import Experience from "./Preview/Experience";
 import Preview from "./Preview";
 import { Cell, CellWrapper, ContentWrapper } from "./styles";
 
@@ -63,7 +61,7 @@ export const PBSheep = React.memo(() => {
               </motion.div>
             )}
           </AnimatePresence>
-          
+
           {/* First Stage */}
           <Stack
             direction="row"

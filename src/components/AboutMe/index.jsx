@@ -20,7 +20,7 @@ export const AboutMe = () => {
 
         <Body>
           <Paragraph variant="body2">
-            Hi again. <br /> My name is Victor Olorunda, and i'm a fullstack web
+            Hi again. <br /> My name is Victor Olorunda, and I'm a fullstack web
             developer.
           </Paragraph>
           {/* <br /> */}
