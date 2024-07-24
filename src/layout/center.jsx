@@ -24,9 +24,9 @@ const Bulb = styled("div")(({ theme }) => ({
   marginRight: "-50px",
   backgroundColor: "#fff",
   [theme.breakpoints.up("sm")]: {
-    width: "80px",
-    height: "80px",
-    marginRight: "-40px",
+    // width: "80px",
+    // height: "80px",
+    // marginRight: "-40px",
   },
 }));
 

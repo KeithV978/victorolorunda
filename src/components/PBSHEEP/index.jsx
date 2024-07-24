@@ -63,6 +63,7 @@ export const PBSheep = React.memo(() => {
               </motion.div>
             )}
           </AnimatePresence>
+          
           {/* First Stage */}
           <Stack
             direction="row"

@@ -121,6 +121,14 @@ export const Data = [
       },
       {
         heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
+        value: "A good communicator.",
+      },
+      {
+        heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
+        value: "Possessing good people skills",
+      },
+      {
+        heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
         value: "...",
       },
     ],
@@ -136,7 +144,7 @@ export const Data = [
     ),
     items: [
       {
-        heading: "Landlords And Tenants",
+        heading: "Landlords And Tenants (Wordpress)",
         value: (
           <a href="https://landlordsandtenants.org">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
@@ -144,7 +152,7 @@ export const Data = [
         ),
       },
       {
-        heading: "Uniben Marketplace",
+        heading: "Uniben Marketplace (React)",
         value: (
           <a href="https://unibenmarketplace.com">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
@@ -153,9 +161,17 @@ export const Data = [
       },
 
       {
-        heading: "Forex With Kayode",
+        heading: "Forex House Ng. (React)",
         value: (
-          <a href="https://">
+          <a href="https://forexhouseng.com">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+      {
+        heading: "My Portfolio (React)",
+        value: (
+          <a href="https://olorunda.xyz">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
