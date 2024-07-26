@@ -23,7 +23,7 @@ export const Data = [
     items: [
       {
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
-        value: "Freelance Fullstack Web Development (1+ years)",
+        value: "Freelance Fullstack Web Development (2+ years)",
       },
       {
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
@@ -74,7 +74,7 @@ export const Data = [
       { heading: "Gender: ", value: "Male" },
       { heading: "Email: ", value: "victorolorunda6@gmail.com" },
       { heading: "Phone: ", value: "+2348152038183" },
-      { heading: "Lives In: ", value: "Edo State, Nigeria." },
+      { heading: "Lives In: ", value: "Ogun State, Nigeria." },
     ],
   },
   {
