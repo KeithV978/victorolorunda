@@ -26,7 +26,7 @@ export const PBSheep = React.memo(() => {
   };
 
   return (
-    <div>
+    <div id="Resume">
       <ContentWrapper>
         <Stack
           direction="column"

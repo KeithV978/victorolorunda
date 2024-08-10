@@ -23,7 +23,7 @@ export const Data = [
     items: [
       {
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
-        value: "Freelance Fullstack Web Development (1+ years)",
+        value: "Freelance Fullstack Web Development (2+ years)",
       },
       {
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
@@ -74,7 +74,7 @@ export const Data = [
       { heading: "Gender: ", value: "Male" },
       { heading: "Email: ", value: "victorolorunda6@gmail.com" },
       { heading: "Phone: ", value: "+2348152038183" },
-      { heading: "Lives In: ", value: "Edo State, Nigeria." },
+      { heading: "Lives In: ", value: "Nigeria." },
     ],
   },
   {
@@ -90,6 +90,10 @@ export const Data = [
       {
         heading: <SchoolRounded color="inherit" fontSize="inherit" />,
         value: "University Of Benin (BSc)",
+      },
+      {
+        heading: <SchoolRounded color="inherit" fontSize="inherit" />,
+        value: "Aptech (Advanced Diploma in Software Engineering)",
       },
       {
         heading: <SchoolRounded color="inherit" fontSize="inherit" />,
@@ -121,11 +125,11 @@ export const Data = [
       },
       {
         heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
-        value: "A good communicator.",
+        value: "A very good communicator.",
       },
       {
         heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
-        value: "Possessing good people skills",
+        value: "Good people management and people skills",
       },
       {
         heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
@@ -156,7 +160,7 @@ export const Data = [
         ),
       },
       {
-        heading: "Uniben Marketplace (React)",
+        heading: "Uniben Marketplace (MERN + FIREBASE)",
         value: (
           <a
             href="https://unibenmarketplace.com"

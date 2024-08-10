@@ -4,7 +4,7 @@ import { Body, Header, Paragraph, Wrapper } from "./styles";
 
 export const AboutMe = () => {
   return (
-    <Wrapper>
+    <Wrapper id="About">
       <Box
         sx={{
           maxWidth: "360px",

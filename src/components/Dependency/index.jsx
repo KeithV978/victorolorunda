@@ -8,7 +8,7 @@ import { useTheme } from "@mui/material";
 export const Dependency = () => {
   const theme = useTheme();
   return (
-    <Wrapper>
+    <Wrapper id="Dependecies">
       <Header variant="h5">
         <CodeRounded sx={{ marginRight: ".2rem" }} />
         If I Were A Dependency

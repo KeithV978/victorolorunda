@@ -32,9 +32,8 @@ export const GitScreen = styled(Box)(({ theme }) => ({
   // ]} 20%, transparent 100%)1 100%`,
   minWidth: "200px",
   // width: "100%",
-  minHeight: "350px",
+  height: "350px",
   color: "#fff",
-  padding: "1rem",
   boxShadow: "-17px 20px 28px 3px #000",
   width: "100%",
   // [theme.breakpoints.up("sp")]: {
@@ -46,4 +45,35 @@ export const GitScreen = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     width: "40rem",
   },
+}));
+export const Table = styled("table")(({ theme }) => ({
+  width: "100%",
+}));
+
+export const ScreenHeader = styled("thead")(({ theme }) => ({
+  width: "100%",
+}));
+export const ScreenHeaderRow = styled("tr")(({ theme }) => ({
+  backgroundColor: "#222222",
+  display: "table-row",
+  width: "100%",
+}));
+export const TableHeaderCell = styled("th")(({ theme }) => ({
+  borderRight: "1px solid #9d9d9d",
+  textAlign: "center",
+  color: "#9d9d9d",
+  padding: ".5rem",
+}));
+export const TableBody = styled("tbody")(({ theme }) => ({
+  width: "100%",
+  textAlign: "left",
+  color: "#fcfcfc",
+  padding: "1rem 0",
+}));
+
+export const TableRow = styled("tr")(() => ({
+  padding: "2rem 0",
+}));
+export const TableCell = styled("td")(() => ({
+  color: "#ccc",
 }));

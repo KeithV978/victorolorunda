@@ -19,7 +19,7 @@ export const Links = () => {
   return (
     <Box
       sx={{
-        margin: "10rem 0",
+        margin: "8rem 0",
         minHeight: "350px",
         display: "flex",
         justifyContent: "center",
@@ -61,6 +61,14 @@ export const Links = () => {
           </ListItem>
           <ListItem>
             <ListItemIcon>
+              <GitHub color="primary" />
+            </ListItemIcon>
+            <Words component="a" href="https://github.com/KeithV978">
+              KeithV978
+            </Words>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
               <Phone color="primary" />
             </ListItemIcon>
             <Words component="a" href="tel:+2348152038183">
@@ -75,17 +83,9 @@ export const Links = () => {
               {"Message Me"}
             </Words>
           </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <GitHub color="primary" />
-            </ListItemIcon>
-            <Words component="a" href="https://github.com/KeithV978">
-              KeithV978
-            </Words>
-          </ListItem>
         </List>
 
-        <Box sx={{ marginTop: "5rem", maxWidth: "500px" }}>
+        <Box sx={{ marginTop: "4rem", maxWidth: "500px" }}>
           <Typography
             variant="h5"
             color="white"

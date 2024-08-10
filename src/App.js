@@ -8,7 +8,7 @@ import theme from "./assets/theme.js";
 import { Layout } from "./layout";
 
 function App() {
-  document.title = "Victor Olorunda - Portfolio"
+  document.title = "Victor Olorunda - Fullstack Web Developer Portfolio";
   return (
     <ThemeProvider theme={theme}>
       {/* <CssBaseline /> */}

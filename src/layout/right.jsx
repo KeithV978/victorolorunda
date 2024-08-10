@@ -47,7 +47,7 @@ export const Right = React.memo(() => {
           <AboutMe />
           <Github />
         </Box>
-        <FormAndPlayer>
+        <FormAndPlayer id="Contact">
           <FormAndPlayerWrapper>
             <Player />
             <ContactForm />
