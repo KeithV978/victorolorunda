@@ -26,7 +26,7 @@ export const Github = React.memo(() => {
     setLoading(true);
 
     const data = await GithubService();
-    if (data === undefined) {
+    if (data === undefined || data?.length === 0) {
       setLoading(false);
       return;
     }
