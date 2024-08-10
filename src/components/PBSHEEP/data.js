@@ -74,7 +74,11 @@ export const Data = [
       { heading: "Gender: ", value: "Male" },
       { heading: "Email: ", value: "victorolorunda6@gmail.com" },
       { heading: "Phone: ", value: "+2348152038183" },
+<<<<<<< HEAD
       { heading: "Lives In: ", value: "Nigeria." },
+=======
+      { heading: "Lives In: ", value: "Ogun State, Nigeria." },
+>>>>>>> fc4b7e21ba070b19e66417aa7ec39109056cd1f1
     ],
   },
   {
