@@ -183,10 +183,16 @@ export const Data = [
       {
         heading: "My Portfolio (React)",
         value: (
-          <a href="https://olorunda.xyz" target="_blank" rel="noreferrer">
+          <a href="https://olorunda.xyz">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
+      },
+      {
+        heading: "MoonBot",
+        value: ( 
+        <a href="https://moonbot-seven.vercel.app/" target="_blank" rel="noreferrer">MoonBot</a>
+        )
       },
     ],
   },
