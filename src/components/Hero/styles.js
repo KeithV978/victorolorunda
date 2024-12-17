@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import bg from "../../assets/images/bg_patterns/mark.png";
+// import bg from "../../assets/images/bg_patterns/mark.png";
 
 export const Container = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -13,7 +13,7 @@ export const Container = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.up("sm")]: {
     margin: "2rem 0 10rem 0",
-    backgroundImage: `url(${bg})`,
+    // backgroundImage: `url(${bg})`,
     backgroundRepeat: "space",
     backgroundPosition: "center",
     borderRadius: "50%",

@@ -29,7 +29,7 @@ export const Scrolled = styled("header")(({ theme }) => ({
   top: 0,
   width: "100%",
   padding: "1rem",
-  zIndex: 100,
+  zIndex: 1000,
   backgroundColor: "#1a1a1a",
   color: "#fff",
   display: "none",

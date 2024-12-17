@@ -29,10 +29,6 @@ export const Data = [
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
         value: "Customer Support Representative (2 years)",
       },
-      {
-        heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
-        value: "...",
-      },
     ],
   },
   {
@@ -73,7 +69,7 @@ export const Data = [
       { heading: "Nationality: ", value: "Nigerian (Edo State)" },
       { heading: "Gender: ", value: "Male" },
       { heading: "Email: ", value: "victorolorunda6@gmail.com" },
-      { heading: "Phone: ", value: "+2348152038183"},
+      { heading: "Phone: ", value: "+2348152038183" },
       { heading: "Lives In: ", value: "Nigeria" },
     ],
   },
@@ -148,22 +144,18 @@ export const Data = [
     ),
     items: [
       {
-        heading: "Landlords And Tenants (Wordpress)",
+        heading: "LeverEdgeAI (React)",
         value: (
-          <a
-            href="https://landlordsandtenants.org"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://leveredgeai.io" target="_blank" rel="noreferrer">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
       },
       {
-        heading: "Uniben Marketplace (MERN + FIREBASE)",
+        heading: "SolGold (React)",
         value: (
           <a
-            href="https://unibenmarketplace.com"
+            href="https://solgold-eight.vercel.app"
             target="_blank"
             rel="noreferrer"
           >
@@ -180,6 +172,7 @@ export const Data = [
           </a>
         ),
       },
+
       {
         heading: "My Portfolio (React)",
         value: (
@@ -190,9 +183,35 @@ export const Data = [
       },
       {
         heading: "MoonBot",
-        value: ( 
-        <a href="https://moonbot-seven.vercel.app/" target="_blank" rel="noreferrer">MoonBot</a>
-        )
+        value: (
+          <a
+            href="https://moonbot-seven.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+      {
+        heading: "Eth-Bomb",
+        value: (
+          <a href="https://www.eth-bomb.com/" target="_blank" rel="noreferrer">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+      {
+        heading: "Landlords And Tenants (Wordpress)",
+        value: (
+          <a
+            href="https://landlordsandtenants.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
       },
     ],
   },
