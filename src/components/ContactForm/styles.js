@@ -86,7 +86,7 @@ export const TextArea = styled("textarea")(({ theme }) => ({
   lineHeight: 1.5,
   letterSpacing: "0.01em",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-  border: "1px solid rgba(255, 127, 80, 0.2)",
+  // border: "1px solid rgba(255, 127, 80, 0.2)",
   marginBottom: "1rem",
   resize: "vertical",
   minHeight: "120px",
