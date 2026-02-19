@@ -1,86 +1,136 @@
 import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
-// import Typography from "@mui/material/Typography";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled(Box)(({ theme }) => ({
+const MotionBox = motion(Box);
+
+export const Wrapper = styled(MotionBox)(({ theme }) => ({
   width: "100%",
-  //  padding: "0 1rem",
-  maxWidth: "360px",
-  minWidth: "360px",
-
+  maxWidth: "450px",
   margin: "auto",
+  
   [theme.breakpoints.up("sm")]: {
-    width: "400px",
+    maxWidth: "520px",
   },
 }));
-// export const Header = styled(Typography)(({ theme }) => ({
-// //  background:
-//   //  "linear-gradient(90.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
-//   padding: ".3rem",
-//  // color: "#1A1A1A",
-//   color: "#fff",
-//   fontWeight: 800,
-//   fontSize: "1.1rem",
-//   textAlign: "left",
-//   // paddingLeft: "4rem",
-//   marginBottom: "1rem",
-//   display: "flex",
-//   alignItems: "center",
-//   background: "linear-gradient(to bottom, #1a1a1a, #242424)",
-//   borderBottom: `1px solid ${[theme.palette.primary.main]}`,
-//   borderBottomLeftRadius: "10px",
-//   borderBottomRightRadius: "10px",
-//   [theme.breakpoints.up("sm")]: {
-//     textAlign: "center",
 
-//     background:
-//       "linear-gradient(270.0deg, #FFFFFF -3.9426819962552817%, #FFFFFF00 116.52852113156786%)",
-//     fontSize: "20px",
-//   },
-// }));
-export const Paragraph = styled("a")(({ theme }) => ({
-  color: "#cfcfcf",
-  fontSize: "1rem",
-  // fontWeight: 700,
-  lineHeight: "24px",
-  // borderLeft: "2px solid transparent",
-  transition: "all ease .2s .2s",
-  // "&:hover": {
-  // borderLeft: `3px solid ${[theme.palette.primary.main]}`,
-  // },
-  // padding: "5px",
-
-  [theme.breakpoints.up("sm")]: {
-    padding: "10px",
-    fontSize: "17px",
-  },
-}));
-export const Body = styled(Box)(({ theme }) => ({
-  paddingLeft: "3.5rem",
-  paddingTop: "1rem",
-  paddingBottom: "1rem",
+export const Body = styled(MotionBox)(({ theme }) => ({
   position: "relative",
-  border: "2px solid #212121",
-  borderRadius: "10px",
-  backgroundColor: "#232222",
-
-  "&::before": {
-    borderBottomRightRadius: "10px",
-    content: "''",
-    position: "absolute",
-    top: "-2px",
-    left: "-2px",
-    width: 0,
-    display: "block",
-    borderWidth: "0 0 45px 45px",
-    borderStyle: "solid",
-    borderColor: `#494848  #1a1a1a`,
-    boxShadow: "7px 6px 7px #111111",
-    WebkitBoxShadow: "7px 6px 7px #111111",
-    MozBoxSizing: "7px 6px 7px #111111",
+  border: "1px solid rgba(255, 127, 80, 0.15)",
+  borderRadius: "20px",
+  background: "linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(30, 30, 30, 0.4) 100%)",
+  backdropFilter: "blur(10px)",
+  padding: "2rem 1.75rem",
+  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.05)",
+  
+  "&:hover": {
+    borderColor: "rgba(255, 127, 80, 0.25)",
+    boxShadow: "0 12px 48px rgba(255, 127, 80, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.08)",
+    transform: "translateY(-2px)",
   },
 
   [theme.breakpoints.up("sm")]: {
-    paddingLeft: "5rem",
+    padding: "2.25rem 2rem",
+    borderRadius: "24px",
+  },
+}));
+
+export const CodeBlock = styled(Box)(({ theme }) => ({
+  fontFamily: '"Monaco", "Courier New", monospace',
+  fontSize: "0.85rem",
+  lineHeight: "1.8",
+  color: "#cfcfcf",
+  
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "0.9rem",
+  },
+}));
+
+export const ImportLine = styled(Box)(({ theme }) => ({
+  marginBottom: "1rem",
+  display: "flex",
+  gap: "0.3rem",
+  alignItems: "center",
+  
+  "& .keyword": {
+    color: "#ff7f50",
+    fontWeight: 700,
+  },
+  
+  "& .brace": {
+    color: "#cfcfcf",
+    fontWeight: 600,
+  },
+}));
+
+export const TechList = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.75rem",
+  margin: "1rem 0",
+  paddingLeft: "1.5rem",
+}));
+
+export const Paragraph = styled(motion.a)(({ theme }) => ({
+  color: "#cfcfcf",
+  fontSize: "inherit",
+  fontWeight: 500,
+  fontFamily: "inherit",
+  textDecoration: "none",
+  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+  display: "inline-block",
+  position: "relative",
+  cursor: "pointer",
+  
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    left: "-1.2rem",
+    width: "4px",
+    height: "4px",
+    backgroundColor: "#ff7f50",
+    borderRadius: "50%",
+    top: "50%",
+    transform: "translateY(-50%)",
+    transition: "all 0.3s ease",
+  },
+  
+  "&:hover": {
+    color: "#ff8a62",
+    transform: "translateX(4px)",
+    textShadow: "0 0 12px rgba(255, 127, 80, 0.4)",
+    
+    "&::before": {
+      width: "8px",
+      height: "4px",
+      boxShadow: "0 0 8px rgba(255, 127, 80, 0.5)",
+    },
+  },
+}));
+
+export const Footer = styled(Box)(({ theme }) => ({
+  marginTop: "1rem",
+  display: "flex",
+  gap: "0.3rem",
+  alignItems: "center",
+  flexWrap: "wrap",
+  
+  "& .brace": {
+    color: "#cfcfcf",
+    fontWeight: 600,
+  },
+  
+  "& .keyword": {
+    color: "#ff7f50",
+    fontWeight: 700,
+  },
+  
+  "& .string": {
+    color: "#7ec8a3",
+  },
+  
+  "& .punctuation": {
+    color: "#cfcfcf",
   },
 }));

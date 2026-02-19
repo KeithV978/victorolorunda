@@ -100,13 +100,18 @@ export const Github = React.memo(() => {
                 </ScreenHeaderRow>
               </ScreenHeader>
               <TableBody>
-                {repos?.length === 0 &&
+                {repos?.length > 0 &&
                   repos?.map((repo, index) => (
-                    <a href={repo} key={index}>
-                      <TableRow>
-                        <TableCell>{index}</TableCell>
-                        <TableCell>{repo.repoName}</TableCell>
-                        <TableCell>{repo.commitDate}</TableCell>
+                    <a href={repo.commitUrl} key={index} style={{ textDecoration: "none" }}>
+                      <TableRow
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1, duration: 0.4 }}
+                        viewport={{ once: true }}
+                      >
+                        <TableCell>{index + 1}</TableCell>
+                        <TableCell sx={{ fontWeight: 600, color: "#ff7f50" }}>{repo.repoName}</TableCell>
+                        <TableCell>{new Date(repo.commitDate).toLocaleDateString()}</TableCell>
                       </TableRow>
                     </a>
                   ))}

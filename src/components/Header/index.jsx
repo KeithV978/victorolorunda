@@ -2,8 +2,11 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import { motion } from "framer-motion";
 import logo from "../../assets/images/logo/port_logo.svg";
 import { Link, Links, Scrolled, Unscrolled } from "./styles";
+
+const MotionContainer = motion(Container);
 
 export const Header = () => {
   const [scrolledHeight, setScrollHeight] = React.useState(window.scrollY);
@@ -16,30 +19,58 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navItems = [
+    { link: "#Dependecies", text: "Dependecies" },
+    { link: "#About", text: "About" },
+    {
+      link: "https://olorunda.xyz",
+      text: (
+        <img
+          src={logo}
+          alt="logo"
+          style={{ display: "block", width: "10%" }}
+        />
+      ),
+    },
+    { link: "#Resume", text: "Resume" },
+    { link: "#Contact", text: "Contact" },
+  ];
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    }),
+    hover: {
+      y: -2,
+      transition: { duration: 0.2 },
+    },
+  };
+
   if (scrolledHeight > 100) {
     return (
-      <Scrolled>
-        <Container>
+      <Scrolled
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
+        <MotionContainer>
           <nav>
             <Links>
-              {[
-                { link: "#Dependecies", text: "Dependecies" },
-                { link: "#About", text: "About" },
-                {
-                  link: "https://olorunda.xyz",
-                  text: (
-                    <img
-                      src={logo}
-                      alt="logo"
-                      style={{ display: "block", width: "10%" }}
-                    />
-                  ),
-                },
-                { link: "#Resume", text: "Resume" },
-                { link: "#Contact", text: "Contact" },
-              ].map((item, index) => (
+              {navItems.map((item, index) => (
                 <Link
                   key={index}
+                  custom={index}
+                  variants={linkVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
                   sx={{
                     display: item.link === "https://olorunda.xyz" && {
                       xs: "none",
@@ -52,24 +83,54 @@ export const Header = () => {
               ))}
             </Links>
           </nav>
-        </Container>
+        </MotionContainer>
       </Scrolled>
     );
   }
+
+  const logoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.2 },
+    },
+  };
+
   return (
-    <Unscrolled>
-      <Container>
-        <Typography component="a" href="https://olorunda.xyz">
-          <Box
+    <Unscrolled
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      <MotionContainer>
+        <motion.div
+          variants={logoVariants}
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          style={{ display: "inline-block", cursor: "pointer" }}
+        >
+          <Typography
+            component="a"
+            href="https://olorunda.xyz"
             sx={{
-              padding: "1rem 0",
-              width: "fit-content",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
             }}
           >
             <Box
               sx={{
-                width: "20px",
-                marginRight: "1rem",
+                width: "24px",
                 display: { sm: "none", xs: "none" },
               }}
             >
@@ -82,23 +143,27 @@ export const Header = () => {
             </Box>
             <Typography
               variant="h6"
-              color="#fff"
-              fontWeight="bold"
-              letterSpacing={6}
               sx={{
-                width: "fit-content",
-                background: `linear-gradient(#222222, #fff) `,
+                color: "#fff",
                 fontWeight: 700,
-                fontSize: { xs: "1rem", sm: "auto" },
+                letterSpacing: "0.1em",
+                fontSize: { xs: "1rem", sm: "1.2rem" },
+                background: "linear-gradient(135deg, #ff7f50 0%, #ff6b35 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                transition: "all 0.3s ease",
+                
+                "&:hover": {
+                  textShadow: "0 0 20px rgba(255, 127, 80, 0.5)",
+                },
               }}
             >
               olorunda.xyz
             </Typography>
-          </Box>
-        </Typography>
-      </Container>
+          </Typography>
+        </motion.div>
+      </MotionContainer>
     </Unscrolled>
   );
 };

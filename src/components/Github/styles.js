@@ -1,8 +1,10 @@
 import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
-// import Typography from "@mui/material/Typography";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled(Box)(({ theme }) => ({
+const MotionBox = motion(Box);
+
+export const Wrapper = styled(MotionBox)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   margin: "3rem auto",
@@ -10,70 +12,126 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   padding: "0 1rem",
   maxWidth: "360px",
   minWidth: "360px",
-  minHeigh: "60vh",
+  minHeight: "60vh",
+  perspective: "1200px",
 
   [theme.breakpoints.up("sm")]: {
-    // justifyContent: "right",
-    // marginLeft: "-1rem",
-    maxWidth: "560px",
+    maxWidth: "580px",
     padding: "initial",
   },
   [theme.breakpoints.up("md")]: {
-    maxWidth: "600px",
+    maxWidth: "620px",
   },
 }));
-export const GitScreen = styled(Box)(({ theme }) => ({
-  backgroundColor: "#000",
-  borderColor: `${[theme.palette.primary.main]}`,
-  borderWidth: "1px",
+
+export const GitScreen = styled(MotionBox)(({ theme }) => ({
+  background: "linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%)",
+  borderColor: "rgba(255, 127, 80, 0.3)",
+  borderWidth: "2px",
   borderStyle: "solid",
-  // borderImage: `linear-gradient(to bottom, transparent 10%,${[
-  //   theme.palette.primary.main,
-  // ]} 20%, transparent 100%)1 100%`,
+  borderRadius: "16px",
   minWidth: "200px",
-  // width: "100%",
-  height: "350px",
+  height: "400px",
   color: "#fff",
-  boxShadow: "-17px 20px 28px 3px #000",
   width: "100%",
-  // [theme.breakpoints.up("sp")]: {
-  //   width: "32rem",
-  // },
-  [theme.breakpoints.up("sm")]: {
-    width: "38rem",
+  boxShadow: "0 12px 48px rgba(255, 127, 80, 0.15), inset 0 0 40px rgba(255, 127, 80, 0.05)",
+  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+  position: "relative",
+  overflow: "hidden",
+  
+  "&:hover": {
+    borderColor: "rgba(255, 127, 80, 0.5)",
+    boxShadow: "0 16px 64px rgba(255, 127, 80, 0.25), inset 0 0 60px rgba(255, 127, 80, 0.08)",
   },
-  [theme.breakpoints.up("md")]: {
+  
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    height: "1px",
+    background: "linear-gradient(90deg, transparent, rgba(255, 127, 80, 0.3), transparent)",
+  },
+
+  [theme.breakpoints.up("sm")]: {
     width: "40rem",
   },
+  [theme.breakpoints.up("md")]: {
+    width: "42rem",
+  },
 }));
+
 export const Table = styled("table")(({ theme }) => ({
   width: "100%",
+  borderCollapse: "collapse",
 }));
 
 export const ScreenHeader = styled("thead")(({ theme }) => ({
   width: "100%",
 }));
+
 export const ScreenHeaderRow = styled("tr")(({ theme }) => ({
-  backgroundColor: "#222222",
+  background: "linear-gradient(90deg, rgba(26, 26, 26, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%)",
+  borderBottom: "2px solid rgba(255, 127, 80, 0.3)",
   display: "table-row",
   width: "100%",
+  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
 }));
+
 export const TableHeaderCell = styled("th")(({ theme }) => ({
-  borderRight: "1px solid #9d9d9d",
+  borderRight: "1px solid rgba(255, 127, 80, 0.15)",
   textAlign: "center",
-  color: "#9d9d9d",
-  padding: ".5rem",
+  color: "#ff7f50",
+  padding: "1rem 0.75rem",
+  fontWeight: 700,
+  fontSize: "0.95rem",
+  letterSpacing: "0.05em",
+  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+  textTransform: "uppercase",
+  
+  "&:hover": {
+    color: "#ff8a62",
+    textShadow: "0 0 10px rgba(255, 127, 80, 0.5)",
+  },
+  
+  "&:last-child": {
+    borderRight: "none",
+  },
 }));
+
 export const TableBody = styled("tbody")(({ theme }) => ({
   width: "100%",
   textAlign: "left",
   color: "#fcfcfc",
-  padding: "1rem 0",
 }));
 
-export const TableRow = styled("tr")(() => ({
-  padding: "2rem 0",
+export const TableRow = styled(motion.tr)(({ theme }) => ({
+  padding: "1rem 0",
+  borderBottom: "1px solid rgba(255, 127, 80, 0.08)",
+  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+  background: "transparent",
+  cursor: "pointer",
+  
+  "&:hover": {
+    backgroundColor: "rgba(255, 127, 80, 0.08)",
+    borderBottomColor: "rgba(255, 127, 80, 0.25)",
+    transform: "translateX(4px)",
+  },
+  
+  "&:last-child": {
+    borderBottom: "none",
+  },
 }));
-export const TableCell = styled("td")(() => ({
-  color: "#ccc",
+
+export const TableCell = styled("td")(({ theme }) => ({
+  color: "#cfcfcf",
+  padding: "1rem 0.75rem",
+  fontSize: "0.95rem",
+  fontWeight: 500,
+  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+  
+  "&:hover": {
+    color: "#ff7f50",
+  },
 }));
