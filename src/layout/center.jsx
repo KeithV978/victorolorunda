@@ -34,7 +34,7 @@ export const CenterLine = () => {
   return (
     <Line>
       <Bulb />
-      <Bulb sx={{ marginBottom: "20rem" }} />
+      <Bulb sx={{ marginBottom: "22rem" }} />
       <Bulb />
     </Line>
   );

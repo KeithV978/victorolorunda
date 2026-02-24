@@ -10,8 +10,8 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
   width: "100%",
   padding: "3rem 1rem",
   marginTop: "4rem",
-  borderTop: "1px solid rgba(255, 127, 80, 0.2)",
-  background: "linear-gradient(180deg, transparent 0%, rgba(255, 127, 80, 0.05) 100%)",
+  borderTop: "1px solid var(--primary)",
+  background: "linear-gradient(180deg, transparent 0%, rgba(96, 24, 231, 0.05) 100%)",
   textAlign: "center",
   position: "relative",
   overflow: "hidden",
@@ -23,7 +23,7 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
     left: 0,
     right: 0,
     height: "1px",
-    background: "linear-gradient(90deg, transparent, rgba(255, 127, 80, 0.3), transparent)",
+    background: "linear-gradient(90deg, transparent, rgba(96, 24, 231, 0.3), transparent)",
   },
 
   [theme.breakpoints.up("sm")]: {
@@ -32,14 +32,14 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
 }));
 
 export const Text = styled(MotionTypography)(({ theme }) => ({
-  color: "#cfcfcf",
+  color: "var(--text-secondary)",
   fontSize: "0.95rem",
   fontWeight: 600,
   letterSpacing: "0.02em",
   transition: "all 0.3s ease",
 
   "& a": {
-    color: "#ff7f50",
+    color: "var(--primary)",
     transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
     position: "relative",
 
@@ -50,12 +50,12 @@ export const Text = styled(MotionTypography)(({ theme }) => ({
       left: 0,
       width: 0,
       height: "2px",
-      background: "linear-gradient(90deg, #ff7f50, #ff6b35)",
+      background: "linear-gradient(90deg, var(--primary), var(--secondary))",
       transition: "width 0.3s ease",
     },
 
     "&:hover": {
-      textShadow: "0 0 10px rgba(255, 127, 80, 0.5)",
+      textShadow: "0 0 10px rgba(96, 24, 231, 0.5)",
 
       "&::after": {
         width: "100%",

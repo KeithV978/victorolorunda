@@ -16,19 +16,19 @@ export const Container = styled(MotionBox)(({ theme }) => ({
   justifyContent: "center",
   padding: "3rem 1rem",
   overflow: "hidden",
-  background: "linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(26, 26, 26, 0.98) 100%)",
+  // background: "linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(26, 26, 26, 0.98) 100%)",
   
   "&::before": {
     content: '""',
     position: "absolute",
     inset: 0,
-    background: "radial-gradient(circle at 25% 35%, rgba(255, 127, 80, 0.08) 0%, transparent 50%)",
+    // background: "radial-gradient(circle at 25% 35%, rgba(255, 127, 80, 0.08) 0%, transparent 50%)",
     pointerEvents: "none",
   },
 
   [theme.breakpoints.up("sm")]: {
     padding: "4rem 2rem",
-    minHeight: "75vh",
+    minHeight: "90vh",
   },
 }));
 
@@ -38,7 +38,7 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
   width: "100%",
   background: "linear-gradient(135deg, rgba(26, 26, 26, 0.5) 0%, rgba(30, 30, 30, 0.4) 100%)",
   backdropFilter: "blur(10px)",
-  border: "1px solid rgba(255, 127, 80, 0.15)",
+  // border: "1px solid rgba(255, 127, 80, 0.15)",
   padding: "3rem 1.5rem",
   borderRadius: "24px",
   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1)",
@@ -48,9 +48,9 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
     padding: "4rem 3rem",
     borderRadius: "32px",
     
+    // boxShadow: "0 12px 48px rgba(255, 238, 80, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15)",
     "&:hover": {
-      borderColor: "rgba(255, 127, 80, 0.3)",
-      boxShadow: "0 12px 48px rgba(255, 127, 80, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15)",
+      // borderColor: "rgba(255, 127, 80, 0.3)",
     },
   },
 }));
@@ -65,21 +65,21 @@ export const ImageWrapper = styled(MotionBox)(({ theme }) => ({
 }));
 
 export const Image = styled(motion.img)(({ theme }) => ({
-  width: "120px",
-  height: "120px",
+  width: "5rem",
+  height: "5rem",
   borderRadius: "20px",
-  filter: "drop-shadow(0 10px 30px rgba(255, 127, 80, 0.25))",
+  // filter: "drop-shadow(0 10px 30px rgba(255, 127, 80, 0.25))",
+  filter: "drop-shadow(0 15px 40px rgba(255, 127, 80, 0.4))",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-  border: "2px solid rgba(255, 127, 80, 0.3)",
+  // border: "2px solid rgba(255, 127, 80, 0.3)",
   
   [theme.breakpoints.up("sm")]: {
-    width: "140px",
-    height: "140px",
+    width: "12rem",
+    height: "12rem",
     borderRadius: "24px",
     
     "&:hover": {
-      filter: "drop-shadow(0 15px 40px rgba(255, 127, 80, 0.4))",
-      borderColor: "rgba(255, 127, 80, 0.6)",
+      // borderColor: "rgba(255, 127, 80, 0.6)",
     },
   },
 }));
@@ -97,27 +97,35 @@ export const MainTitle = styled(motion(Typography))(({ theme }) => ({
   fontSize: "2rem",
   fontWeight: 800,
   letterSpacing: "-0.02em",
-  background: "linear-gradient(135deg, #ffffff 0%, #cfcfcf 100%)",
+  background: "linear-gradient(135deg, #ffffff 0%, #724040 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
-  lineHeight: 1.2,
-  margin: 0,
+  fontFamily: '"MonsieurRegular" !important',
+  transition: "all 0.3s ease",
   
   [theme.breakpoints.up("sm")]: {
-    fontSize: "2.8rem",
-  },
+    fontSize: "4.8rem",
+    letterSpacing: "0.2rem"
+  }, 
+  lineHeight: 1.2,
+  margin: 0
+  
+  // [theme.breakpoints.up("sm")]: {
+  //   fontSize: "2.8rem",
+  // },
 }));
 
 export const Divider = styled(MotionBox)(({ theme }) => ({
   width: "60px",
   height: "3px",
-  background: "linear-gradient(90deg, #ff7f50 0%, #ff6b35 50%, transparent 100%)",
+  background: "linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, transparent 100%)",
   borderRadius: "2px",
-  boxShadow: "0 0 20px rgba(255, 127, 80, 0.4)",
+  boxShadow: "0 0 20px rgba(96, 24, 231, 0.4)",
   margin: "0.5rem auto 0 auto",
   
   [theme.breakpoints.up("sm")]: {
+    width: "50%",
     margin: "0.5rem 0 0 0",
   },
 }));
@@ -134,11 +142,11 @@ export const RoleBadge = styled(motion(Box))(({ theme }) => ({
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: "0.6rem 1.2rem",
-  background: "linear-gradient(135deg, rgba(255, 127, 80, 0.15) 0%, rgba(255, 107, 53, 0.1) 100%)",
-  border: "1.5px solid rgba(255, 127, 80, 0.4)",
+  padding: "0.6rem .3rem",
+  background: "linear-gradient(135deg, rgba(96, 24, 231, 0.15) 0%, rgba(226, 39, 39, 0.1) 100%)",
+  // border: "1.5px solid rgba(96, 24, 231, 0.4)",
   borderRadius: "12px",
-  color: "#ff7f50",
+  color: "#bbbbbb",
   fontSize: "0.95rem",
   fontWeight: 600,
   letterSpacing: "0.05em",
@@ -157,19 +165,7 @@ export const RoleBadge = styled(motion(Box))(({ theme }) => ({
     background: "linear-gradient(135deg, rgba(255, 127, 80, 0.2) 0%, transparent 100%)",
     opacity: 0,
     transition: "opacity 0.3s ease",
-  },
-  
-  "&:hover": {
-    borderColor: "rgba(255, 127, 80, 0.7)",
-    background: "linear-gradient(135deg, rgba(255, 127, 80, 0.25) 0%, rgba(255, 107, 53, 0.15) 100%)",
-    color: "#ff8a62",
-    boxShadow: "0 8px 30px rgba(255, 127, 80, 0.25)",
-    transform: "translateY(-2px)",
-    
-    "&::before": {
-      opacity: 1,
-    },
-  },
+  }, 
 
   [theme.breakpoints.up("sm")]: {
     fontSize: "1rem",
@@ -181,7 +177,7 @@ export const RoleBadge = styled(motion(Box))(({ theme }) => ({
 export const DescriptionText = styled(motion(Typography))(({ theme }) => ({
   fontSize: "0.95rem",
   fontWeight: 500,
-  color: "#cfcfcf",
+  color: "#bbbbbb",
   lineHeight: 1.6,
   letterSpacing: "0.02em",
   maxWidth: "400px",

@@ -16,17 +16,32 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
 
 export const Body = styled(MotionBox)(({ theme }) => ({
   position: "relative",
-  border: "1px solid rgba(255, 127, 80, 0.15)",
+  // border: "1px solid rgba(96, 24, 231, 0.6)",
   borderRadius: "20px",
-  background: "linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(30, 30, 30, 0.4) 100%)",
-  backdropFilter: "blur(10px)",
+  borderTopRightRadius: "5px",
+  background: "linear-gradient(135deg, rgba(80, 80, 80, 0.25) 0%, rgba(77, 77, 77, 0.21) 100%)",
+  backdropFilter: "blur(10px)", 
   padding: "2rem 1.75rem",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.05)",
+  overflow: "hidden",
+    
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    right: 0,
+    width: 0,
+    height: 0,
+    borderStyle: "solid",
+    borderWidth: "0 40px 40px 0",
+    borderColor: `transparent var(--primary) transparent transparent`,
+    boxShadow: "-2px 2px 4px rgba(0, 0, 0, 0.88)",
+  },
   
   "&:hover": {
-    borderColor: "rgba(255, 127, 80, 0.25)",
-    boxShadow: "0 12px 48px rgba(255, 127, 80, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.08)",
+    borderColor: "rgba(96, 24, 231, 0.6)",
+    boxShadow: "0 12px 48px rgba(96, 24, 231, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08)",
     transform: "translateY(-2px)",
   },
 
@@ -54,12 +69,12 @@ export const ImportLine = styled(Box)(({ theme }) => ({
   alignItems: "center",
   
   "& .keyword": {
-    color: "#ff7f50",
+    color: "var(--primary)",
     fontWeight: 700,
   },
   
   "& .brace": {
-    color: "#cfcfcf",
+    color: "var(--text-secondary)",
     fontWeight: 600,
   },
 }));
@@ -73,7 +88,7 @@ export const TechList = styled(Box)(({ theme }) => ({
 }));
 
 export const Paragraph = styled(motion.a)(({ theme }) => ({
-  color: "#cfcfcf",
+  color: "var(--text-secondary)",
   fontSize: "inherit",
   fontWeight: 500,
   fontFamily: "inherit",
@@ -89,7 +104,7 @@ export const Paragraph = styled(motion.a)(({ theme }) => ({
     left: "-1.2rem",
     width: "4px",
     height: "4px",
-    backgroundColor: "#ff7f50",
+    backgroundColor: "var(--primary)",
     borderRadius: "50%",
     top: "50%",
     transform: "translateY(-50%)",
@@ -97,14 +112,14 @@ export const Paragraph = styled(motion.a)(({ theme }) => ({
   },
   
   "&:hover": {
-    color: "#ff8a62",
+    color: "var(--primary)",
     transform: "translateX(4px)",
-    textShadow: "0 0 12px rgba(255, 127, 80, 0.4)",
+    textShadow: "0 0 12px rgba(110, 35, 250, 0.4)",
     
     "&::before": {
       width: "8px",
       height: "4px",
-      boxShadow: "0 0 8px rgba(255, 127, 80, 0.5)",
+      boxShadow: "0 0 8px rgba(110, 35, 250, 0.5)",
     },
   },
 }));
@@ -122,7 +137,7 @@ export const Footer = styled(Box)(({ theme }) => ({
   },
   
   "& .keyword": {
-    color: "#ff7f50",
+    color: "var(--primary)",
     fontWeight: 700,
   },
   

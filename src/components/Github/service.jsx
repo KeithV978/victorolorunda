@@ -9,6 +9,8 @@ const GithubService = async () => {
     const { data: repos } = await octokit.repos.listForUser({
       username: "KeithV978",
       per_page: 10,
+      sort: "updated",
+      direction: "desc",
     });
 
     const repoCommits = await Promise.all(
@@ -20,12 +22,16 @@ const GithubService = async () => {
         });
         return {
           repoName: repo.name,
+          commitMessage: commits[0].commit.message,
           commitDate: commits[0].commit.committer.date,
           commitUrl: commits[0].html_url,
+          author: commits[0].commit.author.name,
         };
       })
     );
-    return repoCommits;
+    
+    // Sort by commit date, most recent first
+    return repoCommits.sort((a, b) => new Date(b.commitDate) - new Date(a.commitDate));
   } catch (error) {
     console.log(error);
     return;

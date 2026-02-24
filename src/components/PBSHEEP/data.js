@@ -21,9 +21,17 @@ export const Data = [
       />
     ),
     items: [
+        {
+        heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
+        value: "Inhouz Cloud Services (1 years)",
+      },
       {
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
-        value: "Freelance Fullstack Web Development (2+ years)",
+        value: "Vector Meta Services (Web3 Agency)(1 years)",
+      },
+        {
+        heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
+        value: "Freelance Fullstack Web Development (3+ years)",
       },
       {
         heading: <WorkHistoryIcon color="inherit" fontSize="inherit" />,
@@ -45,6 +53,14 @@ export const Data = [
         heading: <CodeRounded color="inherit" fontSize="inherit" />,
         value: "Visual Studio Code (Choice Code Editor)",
       },
+        {
+        heading: <CodeRounded color="inherit" fontSize="inherit" />,
+        value: "Cursor (Code Editor)",
+      },
+       {
+        heading: <CodeRounded color="inherit" fontSize="inherit" />,
+        value: "Figma (Prototyping And Wireframing)",
+      },
       {
         heading: <CodeRounded color="inherit" fontSize="inherit" />,
         value: "JustInMind (Prototyping And Wireframing)",
@@ -65,11 +81,10 @@ export const Data = [
       />
     ),
     items: [
-      { heading: "Fullname: ", value: "Victor Oshokunofa Olorunda" },
-      { heading: "Nationality: ", value: "Nigerian (Edo State)" },
+      { heading: "Fullname: ", value: "Victor O. Olorunda" },
+      { heading: "Nationality: ", value: "Nigerian" },
       { heading: "Gender: ", value: "Male" },
-      { heading: "Email: ", value: "victorolorunda6@gmail.com" },
-      { heading: "Phone: ", value: "+2348152038183" },
+      { heading: "Email: ", value: "victorolorunda6@gmail.com" }, 
       { heading: "Lives In: ", value: "Nigeria" },
     ],
   },
@@ -126,11 +141,7 @@ export const Data = [
       {
         heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
         value: "Good people management and people skills",
-      },
-      {
-        heading: <GroupWorkRounded color="inherit" fontSize="inherit" />,
-        value: "...",
-      },
+      }
     ],
   },
   {
@@ -143,64 +154,65 @@ export const Data = [
       />
     ),
     items: [
+       {
+        heading: "LivingRite Health Care Providers",
+        value: (
+          <a href="https://livingritecare.com" target="_blank" rel="noreferrer">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+       {
+        heading: "ATGHJ Health Journal",
+        value: (
+          <a href="https://atghj.africa" target="_blank" rel="noreferrer">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+         {
+        heading: "SETA (Soteria Learning)",
+        value: (
+          <a href="https://atghj.africa" target="_blank" rel="noreferrer">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+         {
+        heading: "Soteria Learning",
+        value: (
+          <a href="https://soterialearning.com" target="_blank" rel="noreferrer">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
       {
-        heading: "LeverEdgeAI (React)",
+        heading: "Afrilearning",
+        value: (
+          <a href="https://www.afrilearning.com/" target="_blank" rel="noreferrer">
+            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
+          </a>
+        ),
+      },
+      {
+        heading: "LeverEdgeAI",
         value: (
           <a href="https://leveredgeai.io" target="_blank" rel="noreferrer">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
-      },
-      {
-        heading: "SolGold (React)",
-        value: (
-          <a
-            href="https://solgold-eight.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
-          </a>
-        ),
-      },
+      }, 
 
       {
-        heading: "Forex House Ng. (React)",
+        heading: "Forex House Ng.",
         value: (
           <a href="https://forexhouseng.com" target="_blank" rel="noreferrer">
             <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
           </a>
         ),
       },
-
-      {
-        heading: "My Portfolio (React)",
-        value: (
-          <a href="https://olorunda.xyz">
-            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
-          </a>
-        ),
-      },
-      {
-        heading: "MoonBot",
-        value: (
-          <a
-            href="https://moonbot-seven.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
-          </a>
-        ),
-      },
-      {
-        heading: "Eth-Bomb",
-        value: (
-          <a href="https://www.eth-bomb.com/" target="_blank" rel="noreferrer">
-            <VisibilityRounded fontSize="inherit" sx={{ marginTop: ".5rem" }} />
-          </a>
-        ),
-      },
+ 
+     
       {
         heading: "Landlords And Tenants (Wordpress)",
         value: (

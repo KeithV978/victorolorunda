@@ -2,20 +2,24 @@
   font-family: ArialBold;
   src: url("./assets/fonts/ARLRDBD.ttf");
 }
+@font-face {
+  font-family: MonsieurRegular;
+  src: url("./assets/fonts/MonsieurLaDoulaise-Regular.ttf");
+}
 
 /* Modern CSS Variables and Animations */
 :root {
-  --primary: #6018e7;
+  --primary: #6e23fa;
   --primary-dark: #6018e7;
-  --primary-light: #6018e7;
+  --primary-light: #7842dd;
   --secondary: #e22727;
   --background: #0f0f0f;
   --surface: #1a1a1a;
   --text-primary: #ffffff;
-  --text-secondary: #cfcfcf;
+  --text-secondary: #949494;
   --border-color: #2a2a2a;
-  --shadow-sm: 0 4px 20px rgba(255, 127, 80, 0.15);
-  --shadow-md: 0 8px 40px rgba(255, 127, 80, 0.25);
+  --shadow-sm: 0 4px 20px rgba(110, 35, 250, 0.15);
+  --shadow-md: 0 8px 40px rgba(110, 35, 250, 0.25);
   --shadow-lg: 0 12px 60px rgba(0, 0, 0, 0.4);
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,27 +38,26 @@ html {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6,
 p,
 span,
-div,
-body {
+div {
   font-family: ArialBold !important;
   font-weight: 700;
 }
-
+h1, h2{
+  font-family: MonsieurRegular !important;
+  font-weight: 400;
+}
 body {
   background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--text-primary);
-  overflow-x: hidden;
-  position: relative;
+  -moz-osx-font-smoothing: grayscale; 
+  overflow-x: hidden; 
 }
 
 body::before {
@@ -64,8 +67,8 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(255, 127, 80, 0.05) 0%, transparent 50%),
-              radial-gradient(circle at 80% 50%, rgba(100, 200, 255, 0.05) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(110, 35, 250, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(226, 39, 39, 0.05) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
@@ -181,12 +184,12 @@ code {
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(255, 127, 80, 0.5);
-    box-shadow: 0 0 20px rgba(255, 127, 80, 0.3);
+    text-shadow: 0 0 10px rgba(110, 35, 250, 0.5);
+    box-shadow: 0 0 20px rgba(110, 35, 250, 0.3);
   }
   50% {
-    text-shadow: 0 0 20px rgba(255, 127, 80, 0.8);
-    box-shadow: 0 0 30px rgba(255, 127, 80, 0.6);
+    text-shadow: 0 0 20px rgba(110, 35, 250, 0.8);
+    box-shadow: 0 0 30px rgba(110, 35, 250, 0.6);
   }
 }
 
@@ -246,27 +249,27 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 127, 80, 0.05);
+  background: rgba(110, 35, 250, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff7f50 0%, #ff6b35 100%);
+  background: linear-gradient(180deg, #6e23fa 0%, #e22727 100%);
   border-radius: 10px;
   transition: all var(--transition-base);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff8a62 0%, #ff7644 100%);
+  background: linear-gradient(180deg, #7842dd 0%, #ff1a1a 100%);
 }
 
 /* Selection Styling */
 ::selection {
-  background: rgba(255, 127, 80, 0.3);
+  background: rgba(110, 35, 250, 0.3);
   color: var(--text-primary);
 }
 
 ::-moz-selection {
-  background: rgba(255, 127, 80, 0.3);
+  background: rgba(110, 35, 250, 0.3);
   color: var(--text-primary);
 }
 

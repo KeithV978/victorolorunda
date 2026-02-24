@@ -1,5 +1,6 @@
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import logo from "../../assets/images/logo/port_logo.svg";
 import {
@@ -133,15 +134,32 @@ export const Hero = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
+              <Typography
+                component="p"
+                sx={{
+                  fontSize: "1.5rem",
+                  fontWeight: 800,
+                  letterSpacing: "-0.02em",
+                  background: "linear-gradient(135deg, #ffffff 0%, #b88e8e 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  transition: "all 0.3s ease",
+                  lineHeight: 1.2,
+                  margin: "1rem 0",
+                }}
+              >
+                Hello! My name is
+              </Typography>
               <MainTitle>Victor Olorunda</MainTitle>
-            </MotionBox>
-
             <Divider
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             />
+            </MotionBox>
+
 
             <RoleContainer
               variants={containerVariants}

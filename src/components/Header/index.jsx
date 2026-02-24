@@ -20,10 +20,10 @@ export const Header = () => {
   }, []);
 
   const navItems = [
-    { link: "#Dependecies", text: "Dependecies" },
+    { link: "#Dependencies", text: "Dependencies" },
     { link: "#About", text: "About" },
     {
-      link: "https://olorunda.xyz",
+      link: "https://olorunda.space",
       text: (
         <img
           src={logo}
@@ -72,7 +72,7 @@ export const Header = () => {
                   animate="visible"
                   whileHover="hover"
                   sx={{
-                    display: item.link === "https://olorunda.xyz" && {
+                    display: item.link === "https://olorunda.space" && {
                       xs: "none",
                       sm: "block",
                     },
@@ -120,7 +120,7 @@ export const Header = () => {
         >
           <Typography
             component="a"
-            href="https://olorunda.xyz"
+            href="https://olorunda.space"
             sx={{
               textDecoration: "none",
               display: "flex",
@@ -148,18 +148,18 @@ export const Header = () => {
                 fontWeight: 700,
                 letterSpacing: "0.1em",
                 fontSize: { xs: "1rem", sm: "1.2rem" },
-                background: "linear-gradient(135deg, #ff7f50 0%, #ff6b35 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                // background: "linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)",
+                // WebkitBackgroundClip: "text",
+                // WebkitTextFillColor: "transparent",
+                // backgroundClip: "text",
                 transition: "all 0.3s ease",
                 
                 "&:hover": {
-                  textShadow: "0 0 20px rgba(255, 127, 80, 0.5)",
+                  textShadow: "0 0 20px rgba(100, 200, 255, 0.5)",
                 },
               }}
             >
-              olorunda.xyz
+              OLORUNDA.SPACE
             </Typography>
           </Typography>
         </motion.div>

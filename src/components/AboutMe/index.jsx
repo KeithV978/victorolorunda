@@ -8,27 +8,44 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
+      staggerChildren: 0.15,
+      delayChildren: 0.3,
+      duration: 0.8,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { 
+      duration: 0.8, 
+      ease: [0.34, 1.56, 0.64, 1],
+    },
   },
+};
+
+const tagVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { 
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: [0.34, 1.56, 0.64, 1],
+    },
+  }),
 };
 
 export const AboutMe = () => {
   return (
-    <Wrapper id="About" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <Wrapper id="About" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}>
       <Box
         sx={{
-          maxWidth: "420px",
+          maxWidth: "500px",
           width: "100%",
         }}
       >
@@ -39,8 +56,12 @@ export const AboutMe = () => {
 
         <Body as={motion.div} variants={itemVariants}>
           <RoleTagsContainer>
-            <RoleTag>UI/UX Designer</RoleTag>
-            <RoleTag>Web Developer</RoleTag>
+            <RoleTag as={motion.div} custom={0} variants={tagVariants}>
+              UI/UX Designer
+            </RoleTag>
+            <RoleTag as={motion.div} custom={1} variants={tagVariants}>
+              Web Developer
+            </RoleTag>
           </RoleTagsContainer>
 
           <Paragraph variant="body2">

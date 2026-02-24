@@ -29,6 +29,11 @@ const technologies = [
   { name: "Node.js", url: "https://nodejs.org" },
   { name: "Express", url: "https://expressjs.com" },
   { name: "MongoDB", url: "https://mongodb.com" },
+  { name: "Next.js", url: "https://nextjs.org" },
+  { name: "Tailwind CSS", url: "https://tailwindcss.com" },
+  { name: "Git", url: "https://git-scm.com" },
+  {name: "Prisma", url: "https://prisma.io"},
+  { name: "PostgreSQL", url: "https://www.postgresql.org" },
   { name: "Firebase", url: "https://firebase.google.com" },
   { name: "Material-UI", url: "https://mui.com" },
   { name: "Framer Motion", url: "https://framer.com" },
@@ -36,7 +41,7 @@ const technologies = [
 
 export const Dependency = () => {
   return (
-    <Wrapper id="Dependecies" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <Wrapper id="Dependencies" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
       <Header variant="h5" as={motion.div} variants={itemVariants}>
         <CodeRounded sx={{ marginRight: ".5rem" }} />
         Tech Stack

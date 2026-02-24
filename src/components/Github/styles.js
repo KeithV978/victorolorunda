@@ -7,7 +7,7 @@ const MotionBox = motion(Box);
 export const Wrapper = styled(MotionBox)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
-  margin: "3rem auto",
+  margin: "4rem auto",
   width: "100%",
   padding: "0 1rem",
   maxWidth: "360px",
@@ -26,7 +26,7 @@ export const Wrapper = styled(MotionBox)(({ theme }) => ({
 
 export const GitScreen = styled(MotionBox)(({ theme }) => ({
   background: "linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%)",
-  borderColor: "rgba(255, 127, 80, 0.3)",
+  borderColor: "var(--primary)",
   borderWidth: "2px",
   borderStyle: "solid",
   borderRadius: "16px",
@@ -34,14 +34,14 @@ export const GitScreen = styled(MotionBox)(({ theme }) => ({
   height: "400px",
   color: "#fff",
   width: "100%",
-  boxShadow: "0 12px 48px rgba(255, 127, 80, 0.15), inset 0 0 40px rgba(255, 127, 80, 0.05)",
+  boxShadow: "0 12px 48px rgba(96, 24, 231, 0.15), inset 0 0 40px rgba(96, 24, 231, 0.05)",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
   position: "relative",
   overflow: "hidden",
   
   "&:hover": {
-    borderColor: "rgba(255, 127, 80, 0.5)",
-    boxShadow: "0 16px 64px rgba(255, 127, 80, 0.25), inset 0 0 60px rgba(255, 127, 80, 0.08)",
+    borderColor: "rgba(96, 24, 231, 0.6)",
+    boxShadow: "0 16px 64px rgba(96, 24, 231, 0.25), inset 0 0 60px rgba(96, 24, 231, 0.08)",
   },
   
   "&::before": {
@@ -51,7 +51,7 @@ export const GitScreen = styled(MotionBox)(({ theme }) => ({
     left: 0,
     right: 0,
     height: "1px",
-    background: "linear-gradient(90deg, transparent, rgba(255, 127, 80, 0.3), transparent)",
+    background: "linear-gradient(90deg, transparent, rgba(96, 24, 231, 0.3), transparent)",
   },
 
   [theme.breakpoints.up("sm")]: {
@@ -67,22 +67,24 @@ export const Table = styled("table")(({ theme }) => ({
   borderCollapse: "collapse",
 }));
 
-export const ScreenHeader = styled("thead")(({ theme }) => ({
+export const ScreenHeader = styled("tr")(({ theme }) => ({
   width: "100%",
+  background: "linear-gradient(90deg, rgba(26, 26, 26, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%)", 
+  display: "table-row"
 }));
 
 export const ScreenHeaderRow = styled("tr")(({ theme }) => ({
   background: "linear-gradient(90deg, rgba(26, 26, 26, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%)",
-  borderBottom: "2px solid rgba(255, 127, 80, 0.3)",
+  borderBottom: "2px solid var(--primary)",
   display: "table-row",
   width: "100%",
   transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
 }));
 
 export const TableHeaderCell = styled("th")(({ theme }) => ({
-  borderRight: "1px solid rgba(255, 127, 80, 0.15)",
+  borderRight: "1px solid var(--primary)",
   textAlign: "center",
-  color: "#ff7f50",
+  color: "var(--primary)",
   padding: "1rem 0.75rem",
   fontWeight: 700,
   fontSize: "0.95rem",
@@ -91,8 +93,8 @@ export const TableHeaderCell = styled("th")(({ theme }) => ({
   textTransform: "uppercase",
   
   "&:hover": {
-    color: "#ff8a62",
-    textShadow: "0 0 10px rgba(255, 127, 80, 0.5)",
+    color: "var(--secondary)",
+    textShadow: "0 0 10px rgba(96, 24, 231, 0.5)",
   },
   
   "&:last-child": {
@@ -108,15 +110,34 @@ export const TableBody = styled("tbody")(({ theme }) => ({
 
 export const TableRow = styled(motion.tr)(({ theme }) => ({
   padding: "1rem 0",
-  borderBottom: "1px solid rgba(255, 127, 80, 0.08)",
+  borderBottom: "1px solid rgba(96, 24, 231, 0.15)",
   transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
-  background: "transparent",
+  background: "rgba(26, 26, 26, 0.3)",
   cursor: "pointer",
+  position: "relative",
+  overflow: "hidden",
+  
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    left: 0,
+    top: 0,
+    height: "100%",
+    width: "3px",
+    background: "linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%)",
+    transform: "scaleX(0)",
+    transformOrigin: "left",
+    transition: "transform 0.3s ease",
+  },
   
   "&:hover": {
-    backgroundColor: "rgba(255, 127, 80, 0.08)",
-    borderBottomColor: "rgba(255, 127, 80, 0.25)",
+    backgroundColor: "rgba(96, 24, 231, 0.15)",
+    borderBottomColor: "rgba(96, 24, 231, 0.4)",
     transform: "translateX(4px)",
+    
+    "&::before": {
+      transform: "scaleX(1)",
+    },
   },
   
   "&:last-child": {
@@ -126,12 +147,12 @@ export const TableRow = styled(motion.tr)(({ theme }) => ({
 
 export const TableCell = styled("td")(({ theme }) => ({
   color: "#cfcfcf",
-  padding: "1rem 0.75rem",
+  padding: "1.2rem 0.75rem",
   fontSize: "0.95rem",
   fontWeight: 500,
   transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
   
   "&:hover": {
-    color: "#ff7f50",
+    color: "var(--primary)",
   },
 }));

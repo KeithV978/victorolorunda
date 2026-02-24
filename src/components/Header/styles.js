@@ -17,6 +17,9 @@ export const Link = styled(motion.li)(({ theme }) => ({
   listStyle: "none",
   cursor: "pointer",
   position: "relative",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
   "& a": {
     display: "block",
@@ -36,15 +39,15 @@ export const Link = styled(motion.li)(({ theme }) => ({
       left: 0,
       width: "0%",
       height: "3px",
-      background: "linear-gradient(90deg, #ff7f50 0%, #ff6b35 100%)",
+      background: "linear-gradient(90deg, primary, primary 100%)",
       transition: "width 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
       borderRadius: "2px",
     },
   },
   
   "&:hover a": {
-    color: "#ff7f50",
-    textShadow: "0 0 20px rgba(255, 127, 80, 0.5)",
+    color: "var(--primary)",
+    textShadow: "0 0 20px rgba(96, 24, 231, 0.5)",
     
     "&::after": {
       width: "100%",
@@ -62,14 +65,13 @@ export const Unscrolled = styled(motion.header)(({ theme }) => ({
 
 export const Scrolled = styled(motion.header)(({ theme }) => ({
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-  position: "fixed",
+  position: "sticky",
   top: 0,
   width: "100%",
   padding: "1.2rem",
   zIndex: 1000,
   backdropFilter: "blur(10px) saturate(180%)",
-  background: "rgba(26, 26, 26, 0.8)",
-  border: "1px solid rgba(255, 127, 80, 0.1)",
+  background: "rgba(26, 26, 26, 0.8)", 
   boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.3)",
   color: "#fff",
   display: "none",
@@ -90,6 +92,6 @@ export const Scrolled = styled(motion.header)(({ theme }) => ({
     left: 0,
     right: 0,
     height: "1px",
-    background: "linear-gradient(90deg, transparent, rgba(255, 127, 80, 0.3), transparent)",
+    background: "linear-gradient(90deg, transparent, rgba(96, 24, 231, 0.3), transparent)",
   },
 }));

@@ -30,17 +30,17 @@ export const InputWrapper = styled(motion.div)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-  border: "1px solid rgba(255, 127, 80, 0.2)",
+  border: "1px solid var(--primary)",
   marginBottom: "1rem",
   
   "&:focus-within": {
     background: "rgba(34, 33, 33, 0.95)",
-    borderColor: "rgba(255, 127, 80, 0.5)",
-    boxShadow: "0 0 0 2px rgba(255, 127, 80, 0.15)",
+    borderColor: "rgba(96, 24, 231, 0.5)",
+    boxShadow: "0 0 0 2px rgba(96, 24, 231, 0.15)",
   },
   
   "&:hover": {
-    borderColor: "rgba(255, 127, 80, 0.4)",
+    borderColor: "rgba(96, 24, 231, 0.4)",
   },
 }));
 

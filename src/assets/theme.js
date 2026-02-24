@@ -1,17 +1,17 @@
 import { createTheme } from "@mui/material";
 import ArialB from "./fonts/ARLRDBD.ttf";
+import  MonsieurRegular from "./fonts/MonsieurLaDoulaise-Regular.ttf";
 
 const theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#ff7f50",
-      light: "#faeeea",
-      dark: "#e66e3f",
+      main: "#6e23fa",
+      light: "#faeeea", 
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#cfcfcf",
+      main: "#e22727",
       light: "#e5e5e5",
       dark: "#a0a0a0",
     },
@@ -39,7 +39,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"ArialB", sans-serif',
+    fontFamily: '"ArialB",  sans-serif',
     h1: {
       fontSize: "3.5rem",
       fontWeight: 700,
@@ -195,7 +195,7 @@ const theme = createTheme({
   overrides: {
     MuiCssBaseline: {
       "@global": {
-        "@font-face": [ArialB],
+        "@font-face": [ArialB, MonsieurRegular]
       },
     },
   },
